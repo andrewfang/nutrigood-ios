@@ -40,6 +40,10 @@ class FoodItem {
         return ""
     }
     
+    private class func getFlickrImage(farmid:String, serverid:String, id:String, secret:String) -> String {
+        return "https://farm\(farmid).staticflickr.com/\(serverid)/\(id)_\(secret).jpg"
+    }
+    
     // returns an image from flickr based on the name
     class func getImageFromFlickrWithSearchQuery(name:String) -> UIImage? {
         if let url = NSURL(string:makeSearchURL(name)) {
