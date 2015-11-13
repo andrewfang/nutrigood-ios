@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
     
-    var store
     var profileName:String {
         get {
             return ""

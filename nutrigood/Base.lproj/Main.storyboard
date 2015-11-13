@@ -644,11 +644,11 @@
     </scenes>
     <resources>
         <image name="cart" width="24" height="24"/>
-        <image name="data" width="36" height="36"/>
-        <image name="foodSelect" width="36" height="36"/>
+        <image name="data" width="24" height="24"/>
+        <image name="foodSelect" width="24" height="24"/>
         <image name="plus" width="24" height="24"/>
-        <image name="profile" width="36" height="36"/>
-        <image name="tips" width="36" height="36"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="tips" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EtC-Cc-QZd"/>

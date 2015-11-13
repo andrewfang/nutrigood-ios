@@ -13,6 +13,8 @@ class CartTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Cart"
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTable", name: PublicConstants.CartUpdated, object: nil)
     }
     
     struct PublicConstants {
@@ -45,11 +47,21 @@ class CartTableViewController: UITableViewController {
                     Database.cart[meal]?.removeAll()
                 }
                 self.notifyCartUpdated()
+                self.showPurchasedAlert()
             }))
         }
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    func showPurchasedAlert() {
+        let purchaseConfirmAlert = UIAlertController(title: "Thank You", message: "Your food will be delivered shortly.", preferredStyle: .Alert)
+        purchaseConfirmAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+        self.presentViewController(purchaseConfirmAlert, animated: true, completion: nil)
+    }
+    
+    func updateTable() {
+        self.tableView.reloadData()
+    }
     
     // MARK: - Table view data source
 
