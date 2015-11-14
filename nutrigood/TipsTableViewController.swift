@@ -21,6 +21,18 @@ class TipsTableViewController: UITableViewController {
         self.title = "Tips"
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100.0
+        
+        if let bkgd = UIImage(named: "chatBackground") {
+            self.view.layer.contents = bkgd.CGImage
+        }        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if (self.chats.count == 0) {
+            self.chats.append(ChatItem(content: "Hi, how can I help you?", type: .AI))
+            self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
+        }
     }
 
     // MARK: - Table view data source
@@ -56,12 +68,14 @@ class TipsTableViewController: UITableViewController {
     }
     
     @IBAction func sayRandomTip(sender: UIButton) {
-        if let buttonText = sender.titleLabel?.text {
-            self.chats.append(ChatItem(content: buttonText, type: .User))
+        guard let buttonText = sender.titleLabel?.text else {
+            return
         }
+        
+        self.chats.append(ChatItem(content: buttonText, type: .User))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
         
-        let tip = Database.getRandomTip()
+        let tip = Database.getRandomTip(buttonText)
         self.chats.append(ChatItem(content: tip, type: .AI))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
     }

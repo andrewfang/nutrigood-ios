@@ -28,10 +28,27 @@ class Database {
         "Not all fats are bad for you. In fact, transfats are the only things that suck. You see, the word trans comes from transit, which is bad.",
     ]
     
+    static var defaultResponse:[String] = [
+        "I see",
+        "Okay",
+        "That's nice",
+        "I don't care",
+        "kk",
+        "sure",
+        "swag",
+        "f'sho",
+    ]
+    
     // MARK: Tip stuff
-    static func getRandomTip() -> String {
-        let idx = Int(arc4random_uniform(UInt32(tips.count)))
-        return tips[idx]
+    static func getRandomTip(buttonTitle:String) -> String {
+        if buttonTitle.hasPrefix("Give") {
+            let idx = Int(arc4random_uniform(UInt32(tips.count)))
+            return tips[idx]
+        } else {
+            let idx = Int(arc4random_uniform(UInt32(defaultResponse.count)))
+            return defaultResponse[idx]
+        }
+        
     }
     
     // MARK: Food stuff
