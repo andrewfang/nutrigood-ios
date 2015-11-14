@@ -10,10 +10,11 @@ import UIKit
 
 class TipsTableViewController: UITableViewController {
 
-    var chats:[String] = []
+    var chats:[ChatItem] = []
+    
     private struct Constants {
-        static let MeCell = "meCell"
-        static let YouCell = "youCell"
+        static let UserCell = "meCell"
+        static let AICell = "youCell"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +34,35 @@ class TipsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.YouCell, forIndexPath: indexPath)
-        if let cell = cell as? ChatTableViewCell {
-            cell.content.text = chats[indexPath.item]
+        
+        var cell:UITableViewCell
+        let chatItem = chats[indexPath.item]
+        
+        // Different chat type for different user
+        if chatItem.type == ChatType.AI {
+            cell = tableView.dequeueReusableCellWithIdentifier(Constants.AICell, forIndexPath: indexPath)
+        } else {
+            cell = tableView.dequeueReusableCellWithIdentifier(Constants.UserCell, forIndexPath: indexPath)
         }
         
+        // Set the text to be the chat item's content
+        if let cell = cell as? ChatTableViewCell {
+            cell.content.text = chatItem.content
+        }
+
         cell.layoutIfNeeded()
         
         return cell
     }
     
-    @IBAction func sayRandomTip() {
+    @IBAction func sayRandomTip(sender: UIButton) {
+        if let buttonText = sender.titleLabel?.text {
+            self.chats.append(ChatItem(content: buttonText, type: .User))
+        }
+        self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
+        
         let tip = Database.getRandomTip()
-        self.chats.append(tip)
+        self.chats.append(ChatItem(content: tip, type: .AI))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
     }
 }

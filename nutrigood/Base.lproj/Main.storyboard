@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Data-->
@@ -534,20 +535,60 @@
                             <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-dQ-4Se">
-                                    <rect key="frame" x="277" y="7" width="46" height="30"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-D9-pCx">
+                                    <rect key="frame" x="75" y="-1" width="450" height="46"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-dQ-4Se">
+                                            <rect key="frame" x="8" y="8" width="120" height="30"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.22352941179999999" green="0.70980392160000005" blue="0.2901960784" alpha="0.87383868239999996" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="dao-a4-nyi"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="9" maxY="0.0"/>
+                                            <state key="normal" title="Give me a tip!">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sayRandomTip:" destination="F82-mO-NnY" eventType="touchUpInside" id="N1W-kp-cdb"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlb-E9-Tij">
+                                            <rect key="frame" x="322" y="8" width="120" height="30"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.22352941179999999" green="0.70980392160000005" blue="0.2901960784" alpha="0.87383868239999996" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="6W6-49-k4F"/>
+                                            </constraints>
+                                            <state key="normal" title="What?">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="sayRandomTip:" destination="F82-mO-NnY" eventType="touchUpInside" id="Aen-A2-G9o"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                     <animations/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="sayRandomTip" destination="F82-mO-NnY" eventType="touchUpInside" id="R4F-d7-trd"/>
-                                    </connections>
-                                </button>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                </stackView>
                             </subviews>
                             <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="QaJ-dQ-4Se" firstAttribute="centerY" secondItem="fOq-5g-0BH" secondAttribute="centerY" id="5Oq-Ma-sHr"/>
-                                <constraint firstItem="QaJ-dQ-4Se" firstAttribute="centerX" secondItem="fOq-5g-0BH" secondAttribute="centerX" id="Qw2-iz-mEL"/>
+                                <constraint firstItem="cBw-D9-pCx" firstAttribute="centerX" secondItem="fOq-5g-0BH" secondAttribute="centerX" id="WhN-g5-03y"/>
+                                <constraint firstItem="cBw-D9-pCx" firstAttribute="width" secondItem="fOq-5g-0BH" secondAttribute="width" multiplier="0.75" id="reu-U1-rQc"/>
+                                <constraint firstItem="cBw-D9-pCx" firstAttribute="centerY" secondItem="fOq-5g-0BH" secondAttribute="centerY" id="yLu-Fn-qgK"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -629,9 +670,19 @@
                             <outlet property="delegate" destination="F82-mO-NnY" id="WMt-JM-PCt"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tips" id="srZ-8b-TiY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2It-0J-lgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Vwm-XK-bka">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem title="Item" id="NVS-T0-idm"/>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="2145" y="1551"/>
         </scene>
