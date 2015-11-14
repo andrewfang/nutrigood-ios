@@ -21,6 +21,8 @@
 		4944331C1BF54F020054CE82 /* MealSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331B1BF54F020054CE82 /* MealSelectTableViewController.swift */; };
 		4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */; };
 		494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */; };
+		49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */; };
+		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		4944331B1BF54F020054CE82 /* MealSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealSelectTableViewController.swift; sourceTree = "<group>"; };
 		4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
+		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */,
+				49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */,
+				49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */,
 			);
 			name = Tips;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			files = (
 				494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */,
 				494433061BF542940054CE82 /* DataViewController.swift in Sources */,
+				49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */,
 				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
 				4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
@@ -212,6 +219,7 @@
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
 				4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */,
 				494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */,
+				49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */,
 				4944331C1BF54F020054CE82 /* MealSelectTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +370,7 @@
 				494432FF1BF53D0B0054CE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

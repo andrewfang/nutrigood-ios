@@ -23,6 +23,18 @@ class Database {
         FoodItem(name: "Chicken Thighs", cals: 2, fats: 2, carbs: 3, favs: 3, category: CollectionNames.Dinner),
     ]
     
+    static var tips:[String] = [
+        "Eat more protein to get strong",
+        "Not all fats are bad for you. In fact, transfats are the only things that suck. You see, the word trans comes from transit, which is bad.",
+    ]
+    
+    // MARK: Tip stuff
+    static func getRandomTip() -> String {
+        let idx = Int(arc4random_uniform(UInt32(tips.count)))
+        return tips[idx]
+    }
+    
+    // MARK: Food stuff
     static func addToCart(food:FoodItem) {
         Database.cart[food.category]?.append(food)
         food.inCart = true

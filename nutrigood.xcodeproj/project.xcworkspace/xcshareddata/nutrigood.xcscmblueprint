@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A52F9E6705AAA8BFF43164988D9D26B3F3BE488E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A52F9E6705AAA8BFF43164988D9D26B3F3BE488E" : 0,
+    "A8E81DB472B086C563A5E54B823ECB1D045E4DC1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D0C69577-C199-4FD2-ACA0-8FEFD4982770",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A52F9E6705AAA8BFF43164988D9D26B3F3BE488E" : "nutrigood\/",
+    "A8E81DB472B086C563A5E54B823ECB1D045E4DC1" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "nutrigood",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "nutrigood.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:andrewfang\/nutrigood-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A52F9E6705AAA8BFF43164988D9D26B3F3BE488E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:andrewfang\/nutrigood.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8E81DB472B086C563A5E54B823ECB1D045E4DC1"
+    }
+  ]
+}
