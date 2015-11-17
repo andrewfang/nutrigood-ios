@@ -11,7 +11,6 @@
 		494432F41BF53D0B0054CE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F21BF53D0B0054CE82 /* Main.storyboard */; };
 		494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494432F51BF53D0B0054CE82 /* Assets.xcassets */; };
 		494432F91BF53D0B0054CE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F71BF53D0B0054CE82 /* LaunchScreen.storyboard */; };
-		494433061BF542940054CE82 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433051BF542940054CE82 /* DataViewController.swift */; };
 		4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433091BF545190054CE82 /* ProfileTableViewController.swift */; };
 		4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944330B1BF545800054CE82 /* FoodSelectTableViewController.swift */; };
 		4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */; };
@@ -22,9 +21,60 @@
 		4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */; };
 		494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
+		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
+		49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F891BFA9D6200360D21 /* Colors.swift */; };
 		49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */; };
 		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
+		49E511A31BFA826B00F0255F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E511921BFA66DC00F0255F /* Charts.framework */; };
+		49E511A41BFA826B00F0255F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49E511921BFA66DC00F0255F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
+		49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49E511911BFA66DC00F0255F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		49E511931BFA66DC00F0255F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		49E511951BFA66DC00F0255F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		49E511A51BFA826B00F0255F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49E511A71BFA826B00F0255F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49E511A41BFA826B00F0255F /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		494432EB1BF53D0B0054CE82 /* nutrigood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nutrigood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,7 +83,6 @@
 		494432F51BF53D0B0054CE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494432F81BF53D0B0054CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494432FA1BF53D0B0054CE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		494433051BF542940054CE82 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		494433091BF545190054CE82 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		4944330B1BF545800054CE82 /* FoodSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelectTableViewController.swift; sourceTree = "<group>"; };
 		4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsTableViewController.swift; sourceTree = "<group>"; };
@@ -44,8 +93,13 @@
 		4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
+		49A22F891BFA9D6200360D21 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
 		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/ios-charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
+		49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E511A31BFA826B00F0255F /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +117,7 @@
 		494432E21BF53D0B0054CE82 = {
 			isa = PBXGroup;
 			children = (
+				49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */,
 				494432ED1BF53D0B0054CE82 /* nutrigood */,
 				494432EC1BF53D0B0054CE82 /* Products */,
 			);
@@ -95,6 +151,7 @@
 				494432EE1BF53D0B0054CE82 /* AppDelegate.swift */,
 				494432F71BF53D0B0054CE82 /* LaunchScreen.storyboard */,
 				494432FA1BF53D0B0054CE82 /* Info.plist */,
+				49A22F891BFA9D6200360D21 /* Colors.swift */,
 			);
 			name = supporting;
 			sourceTree = "<group>";
@@ -102,7 +159,9 @@
 		4944330F1BF549AB0054CE82 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				494433051BF542940054CE82 /* DataViewController.swift */,
+				49E511A81BFA8C1700F0255F /* DataTableViewController.swift */,
+				49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */,
+				49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -140,6 +199,16 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		49E5118C1BFA66DB00F0255F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49E511921BFA66DC00F0255F /* Charts.framework */,
+				49E511941BFA66DC00F0255F /* Charts.framework */,
+				49E511961BFA66DC00F0255F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,10 +219,12 @@
 				494432E71BF53D0B0054CE82 /* Sources */,
 				494432E81BF53D0B0054CE82 /* Frameworks */,
 				494432E91BF53D0B0054CE82 /* Resources */,
+				49E511A71BFA826B00F0255F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				49E511A61BFA826B00F0255F /* PBXTargetDependency */,
 			);
 			name = nutrigood;
 			productName = nutrigood;
@@ -186,12 +257,42 @@
 			mainGroup = 494432E21BF53D0B0054CE82;
 			productRefGroup = 494432EC1BF53D0B0054CE82 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 49E5118C1BFA66DB00F0255F /* Products */;
+					ProjectRef = 49E5118B1BFA66DB00F0255F /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				494432EA1BF53D0B0054CE82 /* nutrigood */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		49E511921BFA66DC00F0255F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 49E511911BFA66DC00F0255F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49E511941BFA66DC00F0255F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 49E511931BFA66DC00F0255F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		49E511961BFA66DC00F0255F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 49E511951BFA66DC00F0255F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		494432E91BF53D0B0054CE82 /* Resources */ = {
@@ -212,16 +313,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */,
-				494433061BF542940054CE82 /* DataViewController.swift in Sources */,
 				497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */,
 				49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */,
+				49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */,
 				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
 				4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
+				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,
+				49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */,
 				4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */,
+				49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */,
 				494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */,
 				49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */,
 				4944331C1BF54F020054CE82 /* MealSelectTableViewController.swift in Sources */,
@@ -229,6 +333,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49E511A61BFA826B00F0255F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = 49E511A51BFA826B00F0255F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		494432F21BF53D0B0054CE82 /* Main.storyboard */ = {
@@ -337,6 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = nutrigood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood;
@@ -348,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = nutrigood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood;

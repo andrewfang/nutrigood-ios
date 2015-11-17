@@ -1,33 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEl-Kb-nnp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iEl-Kb-nnp">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Data-->
-        <scene sceneID="nvm-xc-oiY">
-            <objects>
-                <viewController id="CFa-Bh-UhS" customClass="DataViewController" customModule="nutrigood" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wSV-fq-fjH"/>
-                        <viewControllerLayoutGuide type="bottom" id="kLM-Nn-csj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5xh-RQ-NdV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Data" id="VqJ-F6-IuX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Vw-h8-ltL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2150" y="889"/>
-        </scene>
         <!--Meals-->
         <scene sceneID="BsZ-OL-66h">
             <objects>
@@ -479,12 +459,86 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CFa-Bh-UhS" kind="relationship" relationship="rootViewController" id="hzZ-Lr-8Og"/>
+                        <segue destination="omh-3D-QhY" kind="relationship" relationship="rootViewController" id="HEV-B9-hnG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p91-jh-Znd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1338" y="889"/>
+        </scene>
+        <!--Data Table View Controller-->
+        <scene sceneID="ZhE-B0-0at">
+            <objects>
+                <tableViewController id="omh-3D-QhY" customClass="DataTableViewController" customModule="nutrigood" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gIh-ld-Jwb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartCell" id="b3Q-wU-O2P" customClass="PieChartTableViewCell" customModule="nutrigood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b3Q-wU-O2P" id="4lq-XC-5f5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-gX-MdS" customClass="PieChartView" customModule="Charts">
+                                            <rect key="frame" x="8" y="8" width="584" height="284"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="centerY" secondItem="4lq-XC-5f5" secondAttribute="centerY" id="UDM-ZS-NYn"/>
+                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="trailing" secondItem="4lq-XC-5f5" secondAttribute="trailingMargin" id="f4L-h9-70i"/>
+                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="leading" secondItem="4lq-XC-5f5" secondAttribute="leadingMargin" id="nGj-db-00l"/>
+                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="top" secondItem="4lq-XC-5f5" secondAttribute="topMargin" id="nuu-OB-kFl"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="pieChartView" destination="Q9f-gX-MdS" id="qih-sf-K4n"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bubbleChartCell" rowHeight="300" id="15U-yy-TtZ" customClass="BubbleChartTableViewCell" customModule="nutrigood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="15U-yy-TtZ" id="Q8s-nL-66x">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zz-K5-rio" customClass="BubbleChartView" customModule="Charts">
+                                            <rect key="frame" x="8" y="8" width="584" height="292"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="6zz-K5-rio" firstAttribute="top" secondItem="Q8s-nL-66x" secondAttribute="topMargin" id="2NZ-RF-pbI"/>
+                                        <constraint firstAttribute="bottom" secondItem="6zz-K5-rio" secondAttribute="bottom" id="9iF-cO-VPu"/>
+                                        <constraint firstItem="6zz-K5-rio" firstAttribute="trailing" secondItem="Q8s-nL-66x" secondAttribute="trailingMargin" id="Kyo-DG-lD0"/>
+                                        <constraint firstItem="6zz-K5-rio" firstAttribute="leading" secondItem="Q8s-nL-66x" secondAttribute="leadingMargin" id="N8N-Kb-Tfb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="bubbleChartView" destination="6zz-K5-rio" id="7pQ-Bx-bVo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="omh-3D-QhY" id="Lht-cx-LEu"/>
+                            <outlet property="delegate" destination="omh-3D-QhY" id="JJJ-OU-vGz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="kJ7-gq-SLF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdp-rA-C8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2093" y="915"/>
         </scene>
         <!--Tips-->
         <scene sceneID="men-Ri-HUb">
@@ -792,6 +846,6 @@
         <image name="tips" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EtC-Cc-QZd"/>
+        <segue reference="f1b-9e-PWK"/>
     </inferredMetricsTieBreakers>
 </document>
