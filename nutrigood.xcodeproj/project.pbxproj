@@ -29,6 +29,7 @@
 		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
 		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
 		49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */; };
+		CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
+		CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDietaryGoals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				494433091BF545190054CE82 /* ProfileTableViewController.swift */,
+				CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
+				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
 				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,
 				49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */,

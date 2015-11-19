@@ -1,71 +1,99 @@
 //
-//  ProfileTableViewController.swift
+//  ProfileDietaryGoals.swift
 //  nutrigood
 //
-//  Created by Andrew Fang on 11/12/15.
+//  Created by Jorge Garcia Mesa on 11/18/15.
 //  Copyright © 2015 Fang Industries. All rights reserved.
 //
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
-    
-    var profileName:String {
-        get {
-            return ""
-        }
-    }
-
+class ProfileDietaryGoals: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
+        self.title = "Dietary Goals"
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    private struct constants{
-        static let infoSection = 0
-        static let infoSectionTitle = "Info"
-        static let ReuseCellIdentifier = "resuseTableCell"
-        static let DietaryGoalsSegue = "DIETARY_GOALS"
+    private struct Constants {
+        static let MaxIntakeSection = 0
+        static let DietaryRestrictSection = 1
+        static let MaxIntakeSectionTitle = "Max Intake Per Day"
+        static let DietaryRestrictSectionTitle = "Dietary Restrictions"
+        static let ReuseCellIdentifier = "DietaryGoalsReuse"
+        static let MealSelectSegue = "MORE_SEGUE"
     }
     
-    private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
+    //# Arrays containing the names fo the categories
+    private var intakeList: [String] = ["Calories","Fats", "Carbs", "Sugars"]
     
-    
-    //# the action
-    @IBAction func DietaryGoalClick(sender: AnyObject) {
-        performSegueWithIdentifier(constants.DietaryGoalsSegue,sender: nil)
-    }
+    private var restrictionsList: [String] = ["Vegetarian","Vegan", "More"]
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        switch(section){
+        case Constants.MaxIntakeSection:
+            return 4
+        case Constants.DietaryRestrictSection:
+            return 3
+        default:
+            return 0
+        }
     }
 
+    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return constants.infoSectionTitle
+        switch (section) {
+        case Constants.MaxIntakeSection:
+            return Constants.MaxIntakeSectionTitle
+        case Constants.DietaryRestrictSection:
+            return Constants.DietaryRestrictSectionTitle
+        default:
+            return ""
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 44 //#magic number looked up online
+        switch (indexPath.section) {
+        case Constants.MaxIntakeSection:
+            return 44
+        case Constants.DietaryRestrictSection:
+            return 44
+        default:
+            return 44
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
+        switch (indexPath.section) {
+        case Constants.MaxIntakeSection:
+            cell.textLabel?.text = intakeList[indexPath.row]
+        case Constants.DietaryRestrictSection:
+            cell.textLabel?.text = restrictionsList[indexPath.row]
+        default:
+            break
+        }
         return cell
     }
-//    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        //# what happens when I click on a specific row
-//    }
 
 
     /*
