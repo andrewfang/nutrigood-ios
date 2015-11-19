@@ -32,7 +32,7 @@ class ProfileDietaryGoals: UITableViewController {
         static let MaxIntakeSectionTitle = "Max Intake Per Day"
         static let DietaryRestrictSectionTitle = "Dietary Restrictions"
         static let ReuseCellIdentifier = "DietaryGoalsReuse"
-        static let MealSelectSegue = "MORE_SEGUE"
+        static let DietaryGoalsSegue = "MORE_RESTRICTIONS"
     }
     
     //# Arrays containing the names fo the categories
@@ -95,6 +95,9 @@ class ProfileDietaryGoals: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: restrictionsList[2])
+    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -1,41 +1,40 @@
 //
-//  ProfileTableViewController.swift
+//  ProfileMoreRestrictionsController.swift
 //  nutrigood
 //
-//  Created by Jorge Garcia Mesa on 11/12/15.
+//  Created by Jorge Garcia Mesa on 11/19/15.
 //  Copyright © 2015 Fang Industries. All rights reserved.
 //
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
-    
-    var profileName:String {
-        get {
-            return ""
-        }
-    }
-
+class ProfileMoreRestrictionsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
+        self.title = "Dietary Restrictions"
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    private struct constants{
-        static let infoSection = 0
-        static let infoSectionTitle = "Info"
-        static let ReuseCellIdentifier = "resuseTableCell"
-        static let DietaryGoalsSegue = "DIETARY_GOALS"
+    private struct Constants{
+        static let Restrictions = 0
+        static let RestrictionsTitle = "Restrictions"
+        static let ReuseCellIdentifier = "restrictionsReuse"
+        static let DietaryGoalsSegue = "MORE_RESTRICTIONS"
     }
+
+    private var restrictionsList: [String] = ["Peanut Allergies", "Lactose Intolerant", "Celiac", "Diabetic", "Vitamin Deficiencies"]
     
-    private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
-    
-    
-    //# the action
-    @IBAction func DietaryGoalClick(sender: AnyObject) {
-        performSegueWithIdentifier(constants.DietaryGoalsSegue,sender: nil)
-    }
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -45,11 +44,11 @@ class ProfileTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return 5
     }
-
+    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return constants.infoSectionTitle
+        return Constants.RestrictionsTitle
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -57,16 +56,15 @@ class ProfileTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
+        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
+        cell.textLabel?.text = restrictionsList[indexPath.row] //#fill in with the names of the sections
         
         return cell
     }
-    
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        performSegueWithIdentifier(constants.DietaryGoalsSegue, sender: <#T##AnyObject?#>)
-//    }
 
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//
+//    }
 
     /*
     // Override to support conditional editing of the table view.

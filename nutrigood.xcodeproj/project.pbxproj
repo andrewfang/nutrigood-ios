@@ -30,6 +30,7 @@
 		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
 		49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */; };
 		CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */; };
+		CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
 		CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDietaryGoals.swift; sourceTree = "<group>"; };
+		CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMoreRestrictionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				494433091BF545190054CE82 /* ProfileTableViewController.swift */,
 				CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */,
+				CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
 				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
+				CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */,
 				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,
 				49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */,
 				4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */,
