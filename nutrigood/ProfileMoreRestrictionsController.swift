@@ -56,10 +56,11 @@ class ProfileMoreRestrictionsController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = restrictionsList[indexPath.row] //#fill in with the names of the sections
-        
+        if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSwitchCell{
+        cell.SwitchLabel?.text = restrictionsList[indexPath.row] //#fill in with the names of the sections
         return cell
+        }
+        return tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
     }
 
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

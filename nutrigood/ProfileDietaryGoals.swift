@@ -25,13 +25,21 @@ class ProfileDietaryGoals: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: -- the weak linkes 
+    
+    @IBOutlet weak var textBoxValue: UITextField!
+    @IBAction func sliderUpdate(sender: AnyObject) {
+    
+    }
     
     private struct Constants {
         static let MaxIntakeSection = 0
         static let DietaryRestrictSection = 1
         static let MaxIntakeSectionTitle = "Max Intake Per Day"
         static let DietaryRestrictSectionTitle = "Dietary Restrictions"
-        static let ReuseCellIdentifier = "DietaryGoalsReuse"
+        static let ReuseCellIdentifier = "DietaryGoalsSlider"
+        static let SwitchCellIdentifier = "DietaryGoalsSwitch"
+        static let MoreCellIdentifier = "DietaryGoalsMore"
         static let DietaryGoalsSegue = "MORE_RESTRICTIONS"
     }
     
@@ -59,7 +67,6 @@ class ProfileDietaryGoals: UITableViewController {
         }
     }
 
-    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch (section) {
         case Constants.MaxIntakeSection:
@@ -83,18 +90,35 @@ class ProfileDietaryGoals: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
+        // have to return something so this is just a basic example
+        
         switch (indexPath.section) {
         case Constants.MaxIntakeSection:
-            cell.textLabel?.text = intakeList[indexPath.row]
+            if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSliderCell{
+                cell.IntakeLabel?.text = intakeList[indexPath.row]
+                return cell
+            }
         case Constants.DietaryRestrictSection:
-            cell.textLabel?.text = restrictionsList[indexPath.row]
+            if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath) as? TableViewSwitchCell{
+            cell.SwitchLabel?.text = restrictionsList[indexPath.row]
+            return cell
+            }
         default:
             break
         }
-        return cell
+        return tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath)
     }
-
+    
+    //        if (indexPath.row < 4){
+    //            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
+    //            cell.textLabel?.text = intakeList[indexPath.row]
+    //            return cell
+    //        } else {
+    //            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath)
+    //            cell.textLabel?.text = intakeList[indexPath.row]
+    //            return cell
+    //        }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: restrictionsList[2])
     }

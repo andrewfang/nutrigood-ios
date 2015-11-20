@@ -16,7 +16,6 @@ class ProfileTableViewController: UITableViewController {
         }
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
@@ -30,7 +29,6 @@ class ProfileTableViewController: UITableViewController {
     }
     
     private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
-    
     
     //# the action
     @IBAction func DietaryGoalClick(sender: AnyObject) {
