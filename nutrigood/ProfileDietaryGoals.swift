@@ -35,6 +35,7 @@ class ProfileDietaryGoals: UITableViewController {
     private struct Constants {
         static let MaxIntakeSection = 0
         static let DietaryRestrictSection = 1
+        static let MoreSection = 2
         static let MaxIntakeSectionTitle = "Max Intake Per Day"
         static let DietaryRestrictSectionTitle = "Dietary Restrictions"
         static let ReuseCellIdentifier = "DietaryGoalsSlider"
@@ -46,13 +47,15 @@ class ProfileDietaryGoals: UITableViewController {
     //# Arrays containing the names fo the categories
     private var intakeList: [String] = ["Calories","Fats", "Carbs", "Sugars"]
     
-    private var restrictionsList: [String] = ["Vegetarian","Vegan", "More"]
+    private var restrictionsList: [String] = ["Vegetarian","Vegan"]
+    
+    private var moreList: [String] = ["More"]
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,7 +64,9 @@ class ProfileDietaryGoals: UITableViewController {
         case Constants.MaxIntakeSection:
             return 4
         case Constants.DietaryRestrictSection:
-            return 3
+            return 2
+        case Constants.MoreSection:
+            return 1
         default:
             return 0
         }
@@ -84,6 +89,8 @@ class ProfileDietaryGoals: UITableViewController {
             return 44
         case Constants.DietaryRestrictSection:
             return 44
+        case Constants.MoreSection:
+            return 44
         default:
             return 44
         }
@@ -96,6 +103,10 @@ class ProfileDietaryGoals: UITableViewController {
         case Constants.MaxIntakeSection:
             if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSliderCell{
                 cell.IntakeLabel?.text = intakeList[indexPath.row]
+                //set the cell.names
+//                cell.IntakeSlider.setValue(NSUserDefaults.standardUserDefaults().floatForKey(cell.name), animated: true)
+                //set the switch button on
+                
                 return cell
             }
         case Constants.DietaryRestrictSection:
@@ -103,24 +114,19 @@ class ProfileDietaryGoals: UITableViewController {
             cell.SwitchLabel?.text = restrictionsList[indexPath.row]
             return cell
             }
+        case Constants.MoreSection:
+            if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.MoreCellIdentifier, forIndexPath: indexPath) as? TableViewMoreCell{
+                cell.MoreLabel?.text = moreList[0]
+                return cell
+            }
         default:
             break
         }
         return tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath)
     }
     
-    //        if (indexPath.row < 4){
-    //            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
-    //            cell.textLabel?.text = intakeList[indexPath.row]
-    //            return cell
-    //        } else {
-    //            let cell = tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath)
-    //            cell.textLabel?.text = intakeList[indexPath.row]
-    //            return cell
-    //        }
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: restrictionsList[2])
+        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: moreList[0])
     }
 
     /*

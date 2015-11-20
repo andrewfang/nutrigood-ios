@@ -907,15 +907,31 @@
                                     <outlet property="SwitchLabel" destination="lBy-zl-nAn" id="RG1-Qi-auU"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DietaryGoalsMore" id="Pyt-Lp-jbW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DietaryGoalsMore" id="Pyt-Lp-jbW" customClass="TableViewMoreCell" customModule="nutrigood" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="180" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pyt-Lp-jbW" id="vbe-CM-fwf">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-Ra-KBk">
+                                            <rect key="frame" x="8" y="8" width="42" height="24"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="Ug9-Ra-KBk" firstAttribute="leading" secondItem="vbe-CM-fwf" secondAttribute="leadingMargin" id="5en-hs-DVf"/>
+                                        <constraint firstItem="Ug9-Ra-KBk" firstAttribute="centerY" secondItem="vbe-CM-fwf" secondAttribute="centerY" id="GSq-MU-gRr"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="MoreLabel" destination="Ug9-Ra-KBk" id="AX5-b7-NzQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -952,7 +968,7 @@
                                             <rect key="frame" x="535" y="6" width="51" height="31"/>
                                             <animations/>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDH-Ri-kTU">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDH-Ri-kTU">
                                             <rect key="frame" x="8" y="11" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -962,7 +978,7 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="RDH-Ri-kTU" firstAttribute="leading" secondItem="dCm-FE-tH0" secondAttribute="leadingMargin" constant="66" id="P7F-YD-H6O"/>
+                                        <constraint firstItem="RDH-Ri-kTU" firstAttribute="leading" secondItem="dCm-FE-tH0" secondAttribute="leadingMargin" id="P7F-YD-H6O"/>
                                         <constraint firstItem="bag-5T-XDa" firstAttribute="centerY" secondItem="dCm-FE-tH0" secondAttribute="centerY" id="ePH-2D-nzl"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="bag-5T-XDa" secondAttribute="trailing" constant="8" id="tRD-ao-wKK"/>
                                         <constraint firstItem="RDH-Ri-kTU" firstAttribute="centerY" secondItem="dCm-FE-tH0" secondAttribute="centerY" id="xk6-Cg-ExG"/>

@@ -24,9 +24,12 @@ class TableViewSliderCell: UITableViewCell{
     @IBOutlet weak var IntakeLabel: UILabel!
     @IBOutlet weak var IntakeSlider: UISlider!
     @IBOutlet weak var AmountLabel: UILabel!
+    var name:String!
     
     @IBAction func SliderValueChange(sender: UISlider) {
         self.AmountLabel.text = "\(sender.value)"
+
+//        NSUserDefaults.standardUserDefaults().setFloat(sender.value, forKey: name)
     }
     
 }
