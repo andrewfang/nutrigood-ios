@@ -66,19 +66,31 @@ class MealSelectTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
-        switch (indexPath.section) {
-        case Constants.SelectSection:
-            cell.textLabel?.text = Constants.SelectOptions[indexPath.row]
-        case Constants.MealSection:
-            let mealName = Constants.MealOptions[indexPath.row]
-            cell.textLabel?.text = mealName
-            cell.imageView?.image = FoodItem.getImageFromFlickrWithSearchQuery(mealName)
-        default:
-            break
+        if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? SelectionTableViewCell {
+            switch (indexPath.section) {
+            case Constants.SelectSection:
+                cell.textLabel?.text = Constants.SelectOptions[indexPath.row]
+            case Constants.MealSection:
+                let mealName = Constants.MealOptions[indexPath.row]
+                cell.foodLabel.text = mealName
+                cell.foodImg.image = UIImage(named: "testImage")
+                dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
+                    if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(mealName) {
+                        if let data = NSData(contentsOfURL: url) {
+                            dispatch_async(dispatch_get_main_queue()){
+                                cell.foodImg.image = UIImage(data: data)
+                            }
+                        }
+                    }
+                }
+                
+            default:
+                break
+            }
+            return cell
         }
         
-        return cell
+        return tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
         
     }
     

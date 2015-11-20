@@ -49,7 +49,7 @@ class TipsTableViewController: UITableViewController {
         
         var cell:UITableViewCell
         let chatItem = chats[indexPath.item]
-        
+
         // Different chat type for different user
         if chatItem.type == ChatType.AI {
             cell = tableView.dequeueReusableCellWithIdentifier(Constants.AICell, forIndexPath: indexPath)

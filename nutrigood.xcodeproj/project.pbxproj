@@ -25,6 +25,7 @@
 		49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F891BFA9D6200360D21 /* Colors.swift */; };
 		49A37E4C1BFD98F800593BF9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A37E471BFD981B00593BF9 /* Charts.framework */; };
 		49A37E4D1BFD98F800593BF9 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49A37E471BFD981B00593BF9 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */; };
 		49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */; };
 		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
 		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
@@ -102,6 +103,7 @@
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
 		49A22F891BFA9D6200360D21 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		49A37E401BFD981B00593BF9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
 		49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
 		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				494433191BF54E7C0054CE82 /* CartTableViewController.swift */,
 				494433131BF549D60054CE82 /* FoodItem.swift */,
 				494433151BF54A080054CE82 /* Database.swift */,
+				49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */,
 			);
 			name = FoodSelection;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */,
 				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
 				4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */,
+				49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,

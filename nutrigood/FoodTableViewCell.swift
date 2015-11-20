@@ -20,8 +20,18 @@ class FoodTableViewCell: UITableViewCell {
     var foodItem:FoodItem! {
         didSet {
             self.nameLabel?.text = self.foodItem.name
-            self.imageView?.image = self.foodItem.image
             self.addedToCart = self.foodItem.inCart
+            self.imageView?.image = UIImage(named: "testImage")
+            
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
+                if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(self.foodItem.name) {
+                    if let data = NSData(contentsOfURL: url) {
+                        dispatch_async(dispatch_get_main_queue()){
+                            self.imageView?.image = UIImage(data: data)
+                        }
+                    }
+                }
+            }
         }
     }
     

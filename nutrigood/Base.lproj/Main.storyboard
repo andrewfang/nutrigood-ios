@@ -54,25 +54,47 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="GpB-Ta-o5n" style="IBUITableViewCellStyleDefault" id="BVB-z3-YLI">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="88" id="BVB-z3-YLI" customClass="SelectionTableViewCell" customModule="nutrigood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BVB-z3-YLI" id="qRS-uL-wO7">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BVB-z3-YLI" id="qRS-uL-wO7">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="87.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GpB-Ta-o5n">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="0Fz-Ks-gqv">
+                                            <rect key="frame" x="18" y="0.0" width="87.5" height="87.5"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="0Fz-Ks-gqv" secondAttribute="height" multiplier="1:1" id="4V6-sI-YX9"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMp-UZ-x1E">
+                                            <rect key="frame" x="115.5" y="33" width="42" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="0Fz-Ks-gqv" firstAttribute="centerY" secondItem="qRS-uL-wO7" secondAttribute="centerY" id="4gq-fd-vuU"/>
+                                        <constraint firstItem="0Fz-Ks-gqv" firstAttribute="leading" secondItem="qRS-uL-wO7" secondAttribute="leadingMargin" constant="10" id="6BJ-bW-Wu1"/>
+                                        <constraint firstItem="0Fz-Ks-gqv" firstAttribute="height" secondItem="qRS-uL-wO7" secondAttribute="height" id="fGi-GY-NOe"/>
+                                        <constraint firstItem="yMp-UZ-x1E" firstAttribute="centerY" secondItem="qRS-uL-wO7" secondAttribute="centerY" id="fai-lY-HkB"/>
+                                        <constraint firstItem="yMp-UZ-x1E" firstAttribute="leading" secondItem="0Fz-Ks-gqv" secondAttribute="trailing" constant="10" id="w7e-1z-5u4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="foodImg" destination="0Fz-Ks-gqv" id="zlI-mf-aqr"/>
+                                    <outlet property="foodLabel" destination="yMp-UZ-x1E" id="Nxe-oL-7LH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1075,6 +1097,7 @@
         <image name="foodSelect" width="24" height="24"/>
         <image name="plus" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
+        <image name="testImage" width="60" height="60"/>
         <image name="tips" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
