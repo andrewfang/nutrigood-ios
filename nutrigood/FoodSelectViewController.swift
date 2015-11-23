@@ -17,7 +17,7 @@ class FoodSelectViewController: UIViewController, UICollectionViewDataSource, UI
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.title = self.collectionType
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateItems", name: CartViewController.PublicConstants.CartUpdated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateItems", name: PublicConstants.CartUpdated, object: nil)
     }
     
     var items:[FoodItem] = []

@@ -483,51 +483,70 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="pieChartCell" id="b3Q-wU-O2P" customClass="PieChartTableViewCell" customModule="nutrigood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="lineChartCell" rowHeight="300" id="b3Q-wU-O2P" customClass="LineChartTableViewCell" customModule="nutrigood" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b3Q-wU-O2P" id="4lq-XC-5f5">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-gX-MdS" customClass="PieChartView" customModule="Charts">
-                                            <rect key="frame" x="8" y="8" width="584" height="284"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9f-gX-MdS" customClass="LineChartView" customModule="Charts">
+                                            <rect key="frame" x="8" y="28.5" width="584" height="243"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dug-e2-I7W">
+                                            <rect key="frame" x="279" y="8" width="42" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
+                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="top" secondItem="Dug-e2-I7W" secondAttribute="bottom" id="4hT-rM-fvT"/>
+                                        <constraint firstItem="Dug-e2-I7W" firstAttribute="centerX" secondItem="4lq-XC-5f5" secondAttribute="centerX" id="S8N-bv-eel"/>
                                         <constraint firstItem="Q9f-gX-MdS" firstAttribute="centerY" secondItem="4lq-XC-5f5" secondAttribute="centerY" id="UDM-ZS-NYn"/>
                                         <constraint firstItem="Q9f-gX-MdS" firstAttribute="trailing" secondItem="4lq-XC-5f5" secondAttribute="trailingMargin" id="f4L-h9-70i"/>
+                                        <constraint firstItem="Dug-e2-I7W" firstAttribute="top" secondItem="4lq-XC-5f5" secondAttribute="topMargin" id="hDu-lB-Uap"/>
                                         <constraint firstItem="Q9f-gX-MdS" firstAttribute="leading" secondItem="4lq-XC-5f5" secondAttribute="leadingMargin" id="nGj-db-00l"/>
-                                        <constraint firstItem="Q9f-gX-MdS" firstAttribute="top" secondItem="4lq-XC-5f5" secondAttribute="topMargin" id="nuu-OB-kFl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="pieChartView" destination="Q9f-gX-MdS" id="qih-sf-K4n"/>
+                                    <outlet property="chartTitleLabel" destination="Dug-e2-I7W" id="snd-TY-Mqi"/>
+                                    <outlet property="lineChartView" destination="Q9f-gX-MdS" id="Mju-qA-qWP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bubbleChartCell" rowHeight="300" id="15U-yy-TtZ" customClass="BubbleChartTableViewCell" customModule="nutrigood" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="392" width="600" height="300"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="15U-yy-TtZ" id="Q8s-nL-66x">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zz-K5-rio" customClass="BubbleChartView" customModule="Charts">
-                                            <rect key="frame" x="8" y="8" width="584" height="292"/>
+                                            <rect key="frame" x="8" y="33.5" width="584" height="266.5"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Intake (%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf2-Dw-Gcx">
+                                            <rect key="frame" x="229" y="8" width="143" height="20.5"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="6zz-K5-rio" firstAttribute="top" secondItem="Q8s-nL-66x" secondAttribute="topMargin" id="2NZ-RF-pbI"/>
                                         <constraint firstAttribute="bottom" secondItem="6zz-K5-rio" secondAttribute="bottom" id="9iF-cO-VPu"/>
+                                        <constraint firstItem="Xf2-Dw-Gcx" firstAttribute="top" secondItem="Q8s-nL-66x" secondAttribute="topMargin" id="Bnd-RP-Ahe"/>
                                         <constraint firstItem="6zz-K5-rio" firstAttribute="trailing" secondItem="Q8s-nL-66x" secondAttribute="trailingMargin" id="Kyo-DG-lD0"/>
                                         <constraint firstItem="6zz-K5-rio" firstAttribute="leading" secondItem="Q8s-nL-66x" secondAttribute="leadingMargin" id="N8N-Kb-Tfb"/>
+                                        <constraint firstItem="Xf2-Dw-Gcx" firstAttribute="centerX" secondItem="Q8s-nL-66x" secondAttribute="centerX" id="XhN-id-m35"/>
+                                        <constraint firstItem="6zz-K5-rio" firstAttribute="top" secondItem="Xf2-Dw-Gcx" secondAttribute="bottom" constant="5" id="zXW-5J-pkr"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>

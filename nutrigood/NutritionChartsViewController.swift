@@ -13,11 +13,7 @@ class NutritionChartsViewController: UIViewController {
 
     @IBOutlet weak var calorieValue:UILabel!
     @IBOutlet weak var stackView: UIStackView!
-    
-    struct PublicConstants {
-        static let UpdateNutrition = "UpdateNutritionNotif"
-    }
-    
+
     var calorieBarWidth:NSLayoutConstraint!
     var calories:Int = 0 {
         didSet {
@@ -36,7 +32,7 @@ class NutritionChartsViewController: UIViewController {
         
         updateCharts()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCharts", name: PublicConstants.UpdateNutrition, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCharts", name: CartViewController.PublicConstants.CartUpdated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateCharts", name: PublicConstants.CartUpdated, object: nil)
     }
     
     // Update the chart values
@@ -54,7 +50,7 @@ class NutritionChartsViewController: UIViewController {
             }
         }
         
-        // TODO: Fix these magic numbers to pull from recommended or set
+        // TODO: Fix these magic numbers to pull from recommended or set. Also fix in BubbleChartTableViewCell
         let tooFat = updateFats(totalFat, maxFat: 65.0)
         let tooProtein = updateProtein(totalProtein, maxProtein: 56.0)
         let tooCarb = updateCarbs(totalCarbs, maxCarbs:310.0)
@@ -162,6 +158,7 @@ class NutritionChartsViewController: UIViewController {
         calorieChart.data = BarChartData(xVals: [String](), dataSet: chartDataSet)
     }
     
+    // MARK: - Chart Setup
     @IBOutlet weak var fatChart:PieChartView! {
         didSet {
             fatChart.holeRadiusPercent = 0.3
@@ -186,7 +183,6 @@ class NutritionChartsViewController: UIViewController {
     @IBOutlet weak var calorieChart:HorizontalBarChartView! {
         didSet {
             calorieChart.descriptionText = ""
-//            calorieChart.maxVisibleValueCount = 2000
             calorieChart.pinchZoomEnabled = false
             calorieChart.drawGridBackgroundEnabled = false
             
@@ -207,7 +203,6 @@ class NutritionChartsViewController: UIViewController {
             
         }
     }
-
     
     // MARK: Rounding functions
     private func getPercentage(value:Int, maxTotal:Double) -> Double {

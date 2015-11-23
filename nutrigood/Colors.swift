@@ -14,10 +14,10 @@ struct Colors {
     static let RedAlizarin = UIColor.rgba(231, 76, 60, 0.7)
     static let BlueBelize = UIColor.rgba(41, 128, 185, 0.7)
     static let OrangeCarrot = UIColor.rgba(230, 126, 34, 0.7)
-    static let FatColor = UIColor.rgba(142, 68, 173,1.0)
-    static let CarbColor = UIColor.rgba(41, 128, 185,1.0)
+    static let FatColor = UIColor.rgba(142, 68, 173, 0.7)
+    static let CarbColor = UIColor.rgba(41, 128, 185, 0.7)
     static let ProteinColor = UIColor.rgba(231, 76, 60, 0.7)
-    static let CalorieColor = UIColor.rgba(211, 84, 0,1.0)
+    static let CalorieColor = UIColor.rgba(211, 84, 0, 0.7)
 }
 
 extension UIColor {

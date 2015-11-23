@@ -17,7 +17,7 @@ class FoodCollectionViewCell: UICollectionViewCell {
         } else {
             Database.removeFromCart(self.foodItem)
         }
-        NSNotificationCenter.defaultCenter().postNotificationName(NutritionChartsViewController.PublicConstants.UpdateNutrition, object: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(PublicConstants.UpdateNutrition, object: nil)
     }
     
     @IBOutlet weak var addItemButton: UIButton!

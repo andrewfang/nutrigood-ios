@@ -21,10 +21,6 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
     }
     
-    struct PublicConstants {
-        static let CartUpdated = "CartUpdated"
-    }
-    
     private struct Constants {
         static let BreakfastSection = 0
         static let LunchSection = 1
@@ -43,13 +39,39 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
             alert = UIAlertController(title: "Confirmation", message: "Please confirm your purchase", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { action in
+                var totalProtein = 0.0
+                var totalCarbs = 0.0
+                var totalFats = 0.0
+                var totalCalories = 0
                 for meal in Constants.Meals {
                     for mealItem in Database.cart[meal] ?? [] {
                         mealItem.inCart = false
+                        totalProtein += mealItem.protein
+                        totalCarbs += mealItem.carbs
+                        totalFats += mealItem.fats
+                        totalCalories += mealItem.calories
                         Database.recents.insert(mealItem, atIndex: 0)
                     }
                     Database.cart[meal]?.removeAll()
                 }
+                let currNutritionData = [
+                    PublicConstants.Protein:totalProtein,
+                    PublicConstants.Carbs:totalCarbs,
+                    PublicConstants.Fats:totalFats,
+                    PublicConstants.Calories:totalCalories,
+                    PublicConstants.Date:NSDate(timeIntervalSinceNow: 0)]
+                let userDefaults = NSUserDefaults.standardUserDefaults()
+                
+                var nutritionData = userDefaults.arrayForKey(PublicConstants.NutritionDataKey)
+                if (nutritionData == nil) {
+                    nutritionData = [AnyObject]()
+                } else if (nutritionData?.count > 4) {
+                    nutritionData?.removeFirst()
+                }
+                nutritionData?.append(currNutritionData)
+                
+                userDefaults.setObject(nutritionData, forKey: PublicConstants.NutritionDataKey)
+                
                 self.notifyCartUpdated()
                 self.showPurchasedAlert()
                 self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)

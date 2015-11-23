@@ -14,11 +14,11 @@
 		4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433091BF545190054CE82 /* ProfileTableViewController.swift */; };
 		494433141BF549D60054CE82 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433131BF549D60054CE82 /* FoodItem.swift */; };
 		494433161BF54A080054CE82 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433151BF54A080054CE82 /* Database.swift */; };
-		4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433191BF54E7C0054CE82 /* CartTableViewController.swift */; };
 		4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */; };
 		494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */; };
 		494B4FF71C000B1D00D827CE /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */; };
 		494B4FFA1C02E02400D827CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF91C02E02400D827CE /* Global.swift */; };
+		496BEE6E1C03A5D2003EDE91 /* LineChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
 		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
 		49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F891BFA9D6200360D21 /* Colors.swift */; };
@@ -96,11 +96,11 @@
 		494433091BF545190054CE82 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		494433131BF549D60054CE82 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		494433151BF54A080054CE82 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
-		494433191BF54E7C0054CE82 /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelectViewController.swift; sourceTree = "<group>"; };
 		494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		494B4FF91C02E02400D827CE /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartTableViewCell.swift; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
 		49A22F891BFA9D6200360D21 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -183,6 +183,7 @@
 				49E511A81BFA8C1700F0255F /* DataTableViewController.swift */,
 				49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */,
 				49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */,
+				496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 				494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */,
 				4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */,
 				494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */,
-				494433191BF54E7C0054CE82 /* CartTableViewController.swift */,
 				49A37E861BFFCF4A00593BF9 /* CartViewController.swift */,
 				494433131BF549D60054CE82 /* FoodItem.swift */,
 				494433151BF54A080054CE82 /* Database.swift */,
@@ -351,7 +351,6 @@
 				49A37E871BFFCF4A00593BF9 /* CartViewController.swift in Sources */,
 				49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */,
 				49A37E891BFFDC8300593BF9 /* NutritionChartsViewController.swift in Sources */,
-				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
 				49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */,
@@ -369,6 +368,7 @@
 				49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */,
 				494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */,
 				49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */,
+				496BEE6E1C03A5D2003EDE91 /* LineChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
