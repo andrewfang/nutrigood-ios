@@ -665,7 +665,7 @@
 					};
 					5BA8EC3F1A9D14DC00CE82E1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = T3W4788P2Z;
+						DevelopmentTeam = H99QX4J54R;
 					};
 					A52C5C361BAC5CA400594CDD = {
 						CreatedOnToolsVersion = 7.1;

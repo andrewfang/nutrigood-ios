@@ -12,20 +12,23 @@
 		494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494432F51BF53D0B0054CE82 /* Assets.xcassets */; };
 		494432F91BF53D0B0054CE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F71BF53D0B0054CE82 /* LaunchScreen.storyboard */; };
 		4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433091BF545190054CE82 /* ProfileTableViewController.swift */; };
-		4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944330B1BF545800054CE82 /* FoodSelectTableViewController.swift */; };
-		4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */; };
 		494433141BF549D60054CE82 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433131BF549D60054CE82 /* FoodItem.swift */; };
 		494433161BF54A080054CE82 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433151BF54A080054CE82 /* Database.swift */; };
 		4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433191BF54E7C0054CE82 /* CartTableViewController.swift */; };
-		4944331C1BF54F020054CE82 /* MealSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331B1BF54F020054CE82 /* MealSelectTableViewController.swift */; };
 		4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */; };
-		494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */; };
+		494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */; };
+		494B4FF71C000B1D00D827CE /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */; };
+		494B4FFA1C02E02400D827CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF91C02E02400D827CE /* Global.swift */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
 		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
 		49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F891BFA9D6200360D21 /* Colors.swift */; };
 		49A37E4C1BFD98F800593BF9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A37E471BFD981B00593BF9 /* Charts.framework */; };
 		49A37E4D1BFD98F800593BF9 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49A37E471BFD981B00593BF9 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */; };
+		49A37E811BFFAA0A00593BF9 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E801BFFAA0A00593BF9 /* TipsViewController.swift */; };
+		49A37E851BFFAF7900593BF9 /* MealSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E841BFFAF7900593BF9 /* MealSelectViewController.swift */; };
+		49A37E871BFFCF4A00593BF9 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E861BFFCF4A00593BF9 /* CartViewController.swift */; };
+		49A37E891BFFDC8300593BF9 /* NutritionChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A37E881BFFDC8300593BF9 /* NutritionChartsViewController.swift */; };
 		49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */; };
 		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
 		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
@@ -91,19 +94,22 @@
 		494432F81BF53D0B0054CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494432FA1BF53D0B0054CE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494433091BF545190054CE82 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		4944330B1BF545800054CE82 /* FoodSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelectTableViewController.swift; sourceTree = "<group>"; };
-		4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsTableViewController.swift; sourceTree = "<group>"; };
 		494433131BF549D60054CE82 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		494433151BF54A080054CE82 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		494433191BF54E7C0054CE82 /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
-		4944331B1BF54F020054CE82 /* MealSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealSelectTableViewController.swift; sourceTree = "<group>"; };
 		4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
-		4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodSelectViewController.swift; sourceTree = "<group>"; };
+		494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		494B4FF91C02E02400D827CE /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
 		49A22F891BFA9D6200360D21 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		49A37E401BFD981B00593BF9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		49A37E801BFFAA0A00593BF9 /* TipsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		49A37E841BFFAF7900593BF9 /* MealSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealSelectViewController.swift; sourceTree = "<group>"; };
+		49A37E861BFFCF4A00593BF9 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		49A37E881BFFDC8300593BF9 /* NutritionChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NutritionChartsViewController.swift; sourceTree = "<group>"; };
 		49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
 		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 				494432F71BF53D0B0054CE82 /* LaunchScreen.storyboard */,
 				494432FA1BF53D0B0054CE82 /* Info.plist */,
 				49A22F891BFA9D6200360D21 /* Colors.swift */,
+				494B4FF91C02E02400D827CE /* Global.swift */,
 			);
 			name = supporting;
 			sourceTree = "<group>";
@@ -183,11 +190,13 @@
 		494433101BF549B10054CE82 /* FoodSelection */ = {
 			isa = PBXGroup;
 			children = (
-				4944331B1BF54F020054CE82 /* MealSelectTableViewController.swift */,
-				4944330B1BF545800054CE82 /* FoodSelectTableViewController.swift */,
+				49A37E881BFFDC8300593BF9 /* NutritionChartsViewController.swift */,
+				49A37E841BFFAF7900593BF9 /* MealSelectViewController.swift */,
+				494B4FF21C0009F600D827CE /* FoodSelectViewController.swift */,
 				4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */,
-				4944331F1BF56CF40054CE82 /* FoodTableViewCell.swift */,
+				494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */,
 				494433191BF54E7C0054CE82 /* CartTableViewController.swift */,
+				49A37E861BFFCF4A00593BF9 /* CartViewController.swift */,
 				494433131BF549D60054CE82 /* FoodItem.swift */,
 				494433151BF54A080054CE82 /* Database.swift */,
 				49A37E7D1BFEFC9700593BF9 /* SelectionTableViewCell.swift */,
@@ -198,7 +207,7 @@
 		494433111BF549B80054CE82 /* Tips */ = {
 			isa = PBXGroup;
 			children = (
-				4944330D1BF546BF0054CE82 /* TipsTableViewController.swift */,
+				49A37E801BFFAA0A00593BF9 /* TipsViewController.swift */,
 				49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */,
 				497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */,
 				49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */,
@@ -333,19 +342,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A37E851BFFAF7900593BF9 /* MealSelectViewController.swift in Sources */,
 				CF9236031BFEFEB5001EC1F3 /* TableViewMoreCell.swift in Sources */,
-				494433201BF56CF40054CE82 /* FoodTableViewCell.swift in Sources */,
 				497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */,
 				CF9235FF1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift in Sources */,
 				49DA213E1BF6A0AD00C474DB /* UIPaddedLabel.swift in Sources */,
+				494B4FF71C000B1D00D827CE /* FoodCollectionViewCell.swift in Sources */,
+				49A37E871BFFCF4A00593BF9 /* CartViewController.swift in Sources */,
 				49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */,
+				49A37E891BFFDC8300593BF9 /* NutritionChartsViewController.swift in Sources */,
 				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
-				4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */,
 				49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
-				4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */,
+				494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */,
+				49A37E811BFFAA0A00593BF9 /* TipsViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
 				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
+				494B4FFA1C02E02400D827CE /* Global.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
 				CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */,
 				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,
@@ -356,7 +369,6 @@
 				49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */,
 				494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */,
 				49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */,
-				4944331C1BF54F020054CE82 /* MealSelectTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

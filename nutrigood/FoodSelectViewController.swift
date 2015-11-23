@@ -1,25 +1,31 @@
 //
-//  FoodSelectTableViewController.swift
+//  FoodSelectViewController.swift
 //  nutrigood
 //
-//  Created by Andrew Fang on 11/12/15.
+//  Created by Andrew Fang on 11/20/15.
 //  Copyright © 2015 Fang Industries. All rights reserved.
 //
 
 import UIKit
 
-class FoodSelectTableViewController: UITableViewController {
+class FoodSelectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var collectionView:UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        self.title = self.collectionType
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateItems", name: CartViewController.PublicConstants.CartUpdated, object: nil)
+    }
+    
     var items:[FoodItem] = []
     var collectionType:String!
     
     private struct Constants {
         static let ShowFoodSegue = "SHOW_FOOD"
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = self.collectionType
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTableItems", name: CartTableViewController.PublicConstants.CartUpdated, object: nil)
+        static let CellIdentifier = "FOOD_ITEM_CELL"
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -31,34 +37,30 @@ class FoodSelectTableViewController: UITableViewController {
             presentViewController(alert, animated: true, completion: nil)
         }
     }
-
-    func updateTableItems() {
-        self.tableView.reloadData()
+    
+    func updateItems() {
+        self.collectionView.reloadData()
     }
     
     // MARK: Table view Controls
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as? FoodTableViewCell {
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier, forIndexPath: indexPath) as? FoodCollectionViewCell {
             cell.foodItem = items[indexPath.row]
             return cell
         } else {
-            return tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+            return collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifier, forIndexPath: indexPath)
         }
     }
-
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 88
-    }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier(Constants.ShowFoodSegue, sender: self.items[indexPath.row])
     }
     
@@ -70,5 +72,7 @@ class FoodSelectTableViewController: UITableViewController {
             }
         }
     }
+    
+    
 
 }

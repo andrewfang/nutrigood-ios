@@ -1,18 +1,23 @@
 //
-//  MealSelectTableViewController.swift
+//  MealSelectViewController.swift
 //  nutrigood
 //
-//  Created by Andrew Fang on 11/12/15.
+//  Created by Andrew Fang on 11/20/15.
 //  Copyright © 2015 Fang Industries. All rights reserved.
 //
 
 import UIKit
+import Charts
 
-class MealSelectTableViewController: UITableViewController {
+class MealSelectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView:UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Meals"
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
     
     private struct Constants {
@@ -24,15 +29,16 @@ class MealSelectTableViewController: UITableViewController {
         static let SelectOptions = [Database.CollectionNames.Recents, Database.CollectionNames.Favorites]
         static let MealOptions = [Database.CollectionNames.Breakfast, Database.CollectionNames.Lunch, Database.CollectionNames.Dinner]
         static let MealSelectSegue = "MEAL_SEGUE"
+        static let ChartEmbed = "ChartEmbed"
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
         case Constants.SelectSection:
             return 2
@@ -43,7 +49,7 @@ class MealSelectTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch (section) {
         case Constants.SelectSection:
             return Constants.SelectSectionTitle
@@ -54,7 +60,7 @@ class MealSelectTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch (indexPath.section) {
         case Constants.SelectSection:
             return 44
@@ -64,14 +70,19 @@ class MealSelectTableViewController: UITableViewController {
             return 44
         }
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? SelectionTableViewCell {
             switch (indexPath.section) {
             case Constants.SelectSection:
                 cell.textLabel?.text = Constants.SelectOptions[indexPath.row]
+                cell.imageView?.image = nil
+                cell.foodImg.image = nil
+                cell.foodLabel.text = nil
             case Constants.MealSection:
                 let mealName = Constants.MealOptions[indexPath.row]
+                cell.textLabel?.text = nil
+                cell.imageView?.image = nil
                 cell.foodLabel.text = mealName
                 cell.foodImg.image = UIImage(named: "testImage")
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
@@ -94,7 +105,7 @@ class MealSelectTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch (indexPath.section) {
         case Constants.SelectSection:
             performSegueWithIdentifier(Constants.MealSelectSegue, sender: Constants.SelectOptions[indexPath.row])
@@ -103,11 +114,12 @@ class MealSelectTableViewController: UITableViewController {
         default:
             break
         }
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == Constants.MealSelectSegue) {
-            if let vc = segue.destinationViewController as? FoodSelectTableViewController,
+            if let vc = segue.destinationViewController as? FoodSelectViewController,
                 let collectionType = sender as? String {
                     
                     vc.collectionType = collectionType
@@ -130,14 +142,5 @@ class MealSelectTableViewController: UITableViewController {
             
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

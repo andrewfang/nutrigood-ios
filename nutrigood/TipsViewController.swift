@@ -1,16 +1,18 @@
 //
-//  TipsTableViewController.swift
+//  TipsViewController.swift
 //  nutrigood
 //
-//  Created by Andrew Fang on 11/12/15.
+//  Created by Andrew Fang on 11/20/15.
 //  Copyright © 2015 Fang Industries. All rights reserved.
 //
 
 import UIKit
 
-class TipsTableViewController: UITableViewController {
+class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var chats:[ChatItem] = []
+    
+    @IBOutlet weak var tableView:UITableView!
     
     private struct Constants {
         static let UserCell = "meCell"
@@ -19,12 +21,14 @@ class TipsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tips"
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100.0
         
         if let bkgd = UIImage(named: "chatBackground") {
             self.view.layer.contents = bkgd.CGImage
-        }        
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -34,22 +38,22 @@ class TipsTableViewController: UITableViewController {
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
         }
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chats.count
     }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell:UITableViewCell
         let chatItem = chats[indexPath.item]
-
+        
         // Different chat type for different user
         if chatItem.type == ChatType.AI {
             cell = tableView.dequeueReusableCellWithIdentifier(Constants.AICell, forIndexPath: indexPath)
@@ -61,7 +65,7 @@ class TipsTableViewController: UITableViewController {
         if let cell = cell as? ChatTableViewCell {
             cell.content.text = chatItem.content
         }
-
+        
         cell.layoutIfNeeded()
         
         return cell
@@ -78,5 +82,7 @@ class TipsTableViewController: UITableViewController {
         let tip = Database.getRandomTip(buttonText)
         self.chats.append(ChatItem(content: tip, type: .AI))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
+
+        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.chats.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: false)
     }
 }

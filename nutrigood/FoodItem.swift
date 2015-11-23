@@ -13,14 +13,15 @@ class FoodItem {
     
     var name:String!
     var calories:Int!
-    var fats:Float!
-    var carbs: Float!
-    var favs:Float!
-    var protein:Float!
+    var fats:Double!
+    var carbs: Double!
+    var protein:Double!
+    var favs:Int!
     var category:String!
     var inCart:Bool = false
+    var flickrImage:UIImage?
     
-    init(name:String, cals:Int, fats:Float, carbs:Float, favs:Float, protein:Float, category:String) {
+    init(name:String, cals:Int, fats:Double, carbs:Double, favs:Int, protein:Double, category:String) {
         self.name = name
         self.calories = cals
         self.fats = fats
@@ -32,13 +33,9 @@ class FoodItem {
     
     var image:UIImage? {
         get {
-            // Blocks
-            if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(self.name) {
-                if let data = NSData(contentsOfURL: url) {
-                    return UIImage(data: data)
-                }
-            }
-            return nil
+            return self.flickrImage
+        } set {
+            self.flickrImage = newValue
         }
     }
     
