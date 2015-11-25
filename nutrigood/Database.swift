@@ -11,19 +11,75 @@ import Foundation
 class Database {
     // TODO: Fill these in with manually created FoodItems
     static var breakfasts:[FoodItem] = [
-        FoodItem(name: "Fruit Cup", cals: 30, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: [], category: CollectionNames.Breakfast),
-        FoodItem(name: "Butter Toast", cals: 60, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: ["gluten"], category: CollectionNames.Breakfast),
-        FoodItem(name: "Cereal and Milk", cals: 50, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: ["nuts", "dairy", "gluten"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Chocolate Waffle", cals: 456, fats: 12.0, carbs: 44, protein: 40, allergens: ["gluten"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Pancakes and Syrup", cals: 460, fats: 10, carbs: 57, protein: 40, allergens: ["gluten"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Yogurt and Granola", cals: 790, fats: 18, carbs: 99, protein: 42, allergens: ["nuts"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Breakfast Sausage", cals: 80, fats: 1, carbs: 0, protein: 18, allergens: ["meat"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Oatmeal", cals: 309, fats: 15, carbs: 37, protein: 7, allergens: [], category: CollectionNames.Breakfast),
+        FoodItem(name: "Muffin", cals: 294, fats: 19, carbs: 15, protein: 16, allergens: ["gluten"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Scrambled Eggs", cals: 180, fats: 5, carbs: 12, protein: 23, allergens: [], category: CollectionNames.Breakfast),
+        FoodItem(name: "Quiche", cals: 168, fats: 1, carbs: 10, protein: 30, allergens: [], category: CollectionNames.Breakfast),
+        FoodItem(name: "French Toast", cals: 175, fats: 2.6, carbs: 29.6, protein: 9.4, allergens: ["gluten"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Breakfast Burrito", cals: 313, fats: 10, carbs: 30, protein: 24.4, allergens: [], category: CollectionNames.Breakfast),
+        FoodItem(name: "Mexican Frittata", cals: 302, fats: 16.3, carbs: 14, protein: 26.5, allergens: [], category: CollectionNames.Breakfast),
+        FoodItem(name: "Fruit Bowl", cals: 283, fats: 7.5, carbs: 39, protein: 20.5, allergens: [], category: CollectionNames.Breakfast)
     ]
     static var lunches:[FoodItem] = [
-        FoodItem(name: "Bean Burrito", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: [], category: CollectionNames.Lunch),
-        FoodItem(name: "Salad", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: [], category: CollectionNames.Lunch),
-        FoodItem(name: "Ham & Cheese Sandwich", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: ["pork", "dairy"], category: CollectionNames.Lunch),
+        FoodItem(name: "Ham & Cheese Sandwich", cals: 340, fats: 4.1, carbs: 45.2, protein: 31.6, allergens: ["pork", "dairy"], category: CollectionNames.Lunch),
+        FoodItem(name: "Tuna and Rice", cals: 700, fats: 4, carbs: 100, protein: 44, allergens: ["fish"], category: CollectionNames.Lunch),
+        FoodItem(name: "Pita Pizza", cals: 415, fats: 45, carbs: 31, protein: 8, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Turkey Sliders", cals: 160, fats: 10, carbs: 7, protein: 11, allergens: ["poultry"], category: CollectionNames.Lunch),
+        FoodItem(name: "Ceviche & Quinoa", cals: 540, fats: 15, carbs: 57, protein: 76, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Fish Burger", cals: 616, fats: 17, carbs: 67, protein: 49, allergens: ["fish"], category: CollectionNames.Lunch),
+        FoodItem(name: "Fish Tacos", cals: 468, fats: 21, carbs: 37, protein: 31, allergens: ["fish"], category: CollectionNames.Lunch),
+        FoodItem(name: "Mac and Cheese", cals: 71, fats: 3, carbs: 2, protein: 8, allergens: ["dairy"], category: CollectionNames.Lunch),
+        FoodItem(name: "Beef Chili", cals: 380, fats: 6, carbs: 32, protein: 36, allergens: ["beef"], category: CollectionNames.Lunch),
+        FoodItem(name: "Chicken Salad", cals: 554, fats: 37, carbs: 20, protein: 36, allergens: ["poultry"], category: CollectionNames.Lunch),
+        FoodItem(name: "Bacon Pasta", cals: 268, fats: 15, carbs: 11, protein: 27, allergens: ["pork"], category: CollectionNames.Lunch),
+        FoodItem(name: "Pork Tenderloin", cals: 399, fats: 14, carbs: 21, protein: 25, allergens: ["pork"], category: CollectionNames.Lunch),
+        FoodItem(name: "Steak Salad", cals: 417, fats: 23, carbs: 15, protein: 35, allergens: ["beef"], category: CollectionNames.Lunch),
+        FoodItem(name: "Tuna Salad", cals: 327, fats: 2, carbs: 18, protein: 60, allergens: ["fish"], category: CollectionNames.Lunch),
+        FoodItem(name: "Caprese Salad", cals: 74, fats: 5, carbs: 1, protein: 5, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Quinoa Salad", cals: 141, fats: 6, carbs: 16, protein: 7, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Salad", cals: 167, fats: 9, carbs: 9, protein: 22, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Baked Potato", cals: 454, fats: 3, carbs: 66, protein: 47, allergens: [], category: CollectionNames.Lunch),
+        FoodItem(name: "Beef Burger", cals: 406, fats: 13.7, carbs: 36, protein: 33, allergens: ["beef"], category: CollectionNames.Lunch),
+        FoodItem(name: "Beef Stroganoff", cals: 273, fats: 13.6, carbs: 9, protein: 27.8, allergens: ["beef"], category: CollectionNames.Lunch),
+        FoodItem(name: "Meatball Sub Sandwich", cals: 500, fats: 12, carbs: 41, protein: 47, allergens: ["beef"], category: CollectionNames.Lunch),
+        
+        
+        
     ]
     static var dinners:[FoodItem] = [
-        FoodItem(name: "Salad", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: [], category: CollectionNames.Dinner),
-        FoodItem(name: "Venison", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: ["meat"], category: CollectionNames.Dinner),
-        FoodItem(name: "Chicken and Broccoli", cals: 32, fats: 0.3, carbs: 7.68, protein: 0.67, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Grilled Steak", cals: 549, fats: 20, carbs: 1.2, protein: 100, allergens: ["beef"], category: CollectionNames.Dinner),
+        FoodItem(name: "Lasagna", cals: 1012, fats: 32, carbs: 72, protein: 136, allergens: ["dairy"], category: CollectionNames.Dinner),
+        FoodItem(name: "Glazed Ham", cals: 416, fats: 13.1, carbs: 11.2, protein: 59.7, allergens: ["pork"], category: CollectionNames.Dinner),
+        FoodItem(name: "Bison", cals: 240, fats: 8, carbs: 3, protein: 38, allergens: ["meat"], category: CollectionNames.Dinner),
+        FoodItem(name: "Steak Taco", cals: 380, fats: 18.5, carbs: 29.5, protein: 28, allergens: ["beef"], category: CollectionNames.Dinner),
+        FoodItem(name: "Chicken Spaghetti", cals: 275, fats: 12, carbs: 13.4, protein: 29, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Chicken and Rice", cals: 487, fats: 17.1, carbs: 24.1, protein: 59.2, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Chickpea Stew", cals: 221, fats: 2.1, carbs: 29.6, protein: 15, allergens: [], category: CollectionNames.Dinner),
+        FoodItem(name: "Stuffed Chicken Breast", cals: 363, fats: 6, carbs: 32, protein: 43, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Pineapple Chicken", cals: 343, fats: 15.7, carbs: 11, protein: 49, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Pad Thai", cals: 458, fats: 14, carbs: 39, protein: 56, allergens: ["nuts"], category: CollectionNames.Dinner),
+        FoodItem(name: "Meatballs & Squash", cals: 1489, fats: 39, carbs: 115, protein: 156, allergens: ["meat"], category: CollectionNames.Dinner),
+        FoodItem(name: "Turkey Burger", cals: 388, fats: 8.2, carbs: 39, protein: 49, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Chicken Enchilada", cals: 525, fats: 9, carbs: 61, protein: 60, allergens: ["poultry", "dairy"], category: CollectionNames.Dinner),
+        FoodItem(name: "Chicken Kabobs", cals: 470, fats: 6.2, carbs: 20, protein: 80, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Honey Salmon", cals: 484, fats: 26, carbs: 40, protein: 41, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Tuna Wrap", cals: 64, fats: 1.5, carbs: 5, protein: 8, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Sushi", cals: 325, fats: 18.6, carbs: 22, protein: 23, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Grilled Cod", cals: 360, fats: 16, carbs: 10, protein: 61, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Halibut", cals: 358, fats: 11.6, carbs: 29, protein: 30.2, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Shrimp Ceviche", cals: 111, fats: 4.4, carbs: 5.5, protein: 12.5, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Shrimp and Rice", cals: 223, fats: 1.2, carbs: 28, protein: 23, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Noodle Soup", cals: 83, fats: 1.2, carbs: 5, protein: 6.8, allergens: [], category: CollectionNames.Dinner),
+        FoodItem(name: "Pasta with Shrimp", cals: 310, fats: 9, carbs: 37, protein: 21, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Tilapia", cals: 265, fats: 4, carbs: 24, protein: 33, allergens: ["fish"], category: CollectionNames.Dinner),
+        FoodItem(name: "Lettuce Wraps", cals: 85, fats: 1, carbs: 5, protein: 14, allergens: ["nuts"], category: CollectionNames.Dinner),
+        FoodItem(name: "Grilled Potatos", cals: 195, fats: 4, carbs: 36, protein: 5, allergens: [], category: CollectionNames.Dinner),
+        
+        
     ]
     
     static var tips:[String] = [
@@ -57,6 +113,19 @@ class Database {
         "swag",
         "f'sho",
     ]
+    
+    static var suggestions:[String] = [
+        "May I suggest...",
+        "How about...",
+        "Would you like some...",
+        "I suggest...",
+        "I think you should have some...",
+    ]
+    
+    static func suggest() -> String {
+        let idx = Int(arc4random_uniform(UInt32(suggestions.count)))
+        return suggestions[idx]
+    }
     
     // MARK: Tip stuff
     static func getRandomTip() -> String {

@@ -30,6 +30,7 @@ struct PublicConstants {
         "nuts":"🌰",
         "dairy":"🧀",
         "gluten":"🍞",
+        "fish":"🐟"
     ]
 }
 

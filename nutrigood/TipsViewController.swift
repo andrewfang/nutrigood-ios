@@ -98,13 +98,11 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func suggestAMeal(sender: UIButton) {
-        guard let buttonText = sender.titleLabel?.text else {
-            return
-        }
-        self.chats.append(ChatItem(content: buttonText, type: .User))
-        self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
-        self.mealChatOptions.alpha = 1.0
-        self.firstChatOptions.alpha = 0.0
+        UIView.animateWithDuration(0.2, animations: {
+            self.mealChatOptions.alpha = 1.0
+            self.firstChatOptions.alpha = 0.0
+        })
+        
     }
     
     @IBAction func suggestABreakfast(sender: UIButton) {
@@ -130,19 +128,29 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private func performMealSuggestion(meal:String, buttonText:String) {
         
-        self.chats.append(ChatItem(content: buttonText, type: .User))
+        self.chats.append(ChatItem(content: "I want something for \(buttonText.lowercaseString)", type: .User))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
 
         let meal = Database.getRandomMeal(meal)
         if (meal != nil) {
-            self.chats.append(ChatItem(content: "May I suggest for \(buttonText.lowercaseString) that you have...", type: .AI))
+            self.chats.append(ChatItem(content: Database.suggest(), type: .AI))
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
             self.chats.append(ChatItem(content: meal!))
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
         }
         
         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.chats.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: false)
-        self.mealChatOptions.alpha = 0.0
-        self.firstChatOptions.alpha = 1.0
+        self.showOriginalChat()
+    }
+    
+    @IBAction func backToOriginalChart() {
+        self.showOriginalChat()
+    }
+    
+    private func showOriginalChat() {
+        UIView.animateWithDuration(0.2, animations: {
+            self.mealChatOptions.alpha = 0.0
+            self.firstChatOptions.alpha = 1.0
+        })
     }
 }
