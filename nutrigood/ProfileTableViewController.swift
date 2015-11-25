@@ -31,8 +31,8 @@ class ProfileTableViewController: UITableViewController, UIPickerViewDelegate{
     
     private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
     private var genderValues: [String] = ["54", "Male", "190 lb", "72 in"]
-//    private var age = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,17,18]
-//    private var gender = ["Female", "Male"] //should think about other genders 
+//    private var age = []
+//    private var gender = ["Female", "Male","Other"] //should think about other genders
 //    private var weight = []
 //    private var height = []
     
