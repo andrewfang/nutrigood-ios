@@ -29,12 +29,10 @@ class ProfileTableViewController: UITableViewController {
         static let DietaryGoalsSegue = "DIETARY_GOALS"
     }
     
-    private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
+    private var infoList: [String] = ["Age","Gender", "Weight (lb)", "Height (In)"]
     private var genderValues: [String] = ["54", "Male", "190 lb", "72 in"]
-//    private var age = []
-//    private var gender = ["Female", "Male","Other"] //should think about other genders
-//    private var weight = []
-//    private var height = []
+    private var pickerTitleOptions = [["20-30","31-40","41-50","51-60","61-70","71-80"],["Female", "Male","Other"],["100-110","111-120","121-130","131-140","141-150","151-160","161-170","171-180","181-190","191-200","201-210","211-220","221-230","231-240","241-250",
+        "251-260","261-270","271-280","281-290","291-300"],["60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78"]]
     
     //# the action
     @IBAction func DietaryGoalClick(sender: AnyObject) {
@@ -57,7 +55,7 @@ class ProfileTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 44 //#magic number looked up online
+        return 88 //#magic number looked up online
     }
     
     var pickerData:[String] = [String]()
@@ -65,8 +63,7 @@ class ProfileTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewInfoCell{
             cell.infoLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
-            cell.pickerTitles = ["Male", "Female"]
-            
+            cell.pickerTitles = pickerTitleOptions[indexPath.row]
             cell.infoPicker.delegate = cell
             cell.infoPicker.dataSource = cell
             return cell
@@ -74,11 +71,6 @@ class ProfileTableViewController: UITableViewController {
         return tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)
     }
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        performSegueWithIdentifier(constants.DietaryGoalsSegue, sender: <#T##AnyObject?#>)
-//    }
-
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

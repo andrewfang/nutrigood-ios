@@ -45,14 +45,14 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
     }
     
     //# Arrays containing the names fo the categories
-    private var intakeList: [String] = ["Calories","Fats", "Carbs", "Sugars"]
+    private var intakeList: [String] = ["Calories","Fats", "Carbs", "Protein"]
     
     private var restrictionsList: [String] = ["Vegetarian","Vegan"]
     
     private var moreList: [String] = ["More"]
     
-    private var sliderValues: [String] = ["3000","100","400","50"]
-    private var sliderValues2: [Float] = [3000,100,400,50]
+//    private var sliderValues: [String] = ["3000","100","400","50"]
+    private var sliderValues: [Float] = [3000,100,400,50]
 
 
     // MARK: - Table view data source
@@ -107,11 +107,10 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
         case Constants.MaxIntakeSection:
             if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSliderCell{
                 cell.IntakeLabel?.text = intakeList[indexPath.row]
-                cell.IntakeSlider?.maximumValue = sliderValues2[indexPath.row]
+                cell.IntakeSlider?.maximumValue = sliderValues[indexPath.row]
                 //set the cell.names
 //                cell.IntakeSlider.setValue(NSUserDefaults.standardUserDefaults().floatForKey(cell.name), animated: true)
                 //set the switch button on
-                
                 return cell
             }
         case Constants.DietaryRestrictSection:
@@ -136,7 +135,6 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
             performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: nil)
         default:
             break
-//        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: moreList[0])
     }
 }
 
