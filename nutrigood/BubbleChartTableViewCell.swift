@@ -13,6 +13,7 @@ class BubbleChartTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bubbleChartView:BubbleChartView! {
         didSet {
+            self.bubbleChartView.noDataTextDescription = "Charts will appear after an order is made"
             self.bubbleChartView.setScaleEnabled(false)
             self.bubbleChartView.descriptionText = ""
             self.bubbleChartView.drawGridBackgroundEnabled = false
@@ -31,11 +32,10 @@ class BubbleChartTableViewCell: UITableViewCell {
         var calories: [ChartDataEntry] = []
         var dates: [String] = []
         
-        // TODO: get max protein. also fix in NutritionChartsViewController
-        let maxProtein = 56.0
-        let maxCarbs = 310.0
-        let maxFats = 65.0
-        let maxCalories = 2500.0
+        let maxProtein = Profile.protein
+        let maxCarbs = Profile.carbs
+        let maxFats = Profile.fats
+        let maxCalories = Double(Profile.calories)
         
         let data = NSUserDefaults.standardUserDefaults().arrayForKey(PublicConstants.NutritionDataKey)
         guard let nutritionData = data as? [NSDictionary] else {

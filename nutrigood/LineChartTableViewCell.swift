@@ -14,6 +14,7 @@ class LineChartTableViewCell: UITableViewCell {
     @IBOutlet weak var chartTitleLabel: UILabel!
     @IBOutlet weak var lineChartView:LineChartView! {
         didSet {
+            self.lineChartView.noDataText = ""
             self.lineChartView.descriptionText = ""
             self.lineChartView.drawGridBackgroundEnabled = false
             self.lineChartView.legend.enabled = false

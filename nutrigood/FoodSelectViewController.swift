@@ -11,17 +11,20 @@ import UIKit
 class FoodSelectViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView:UICollectionView!
-    
+    @IBOutlet weak var sortView: UIView!
+    @IBOutlet weak var sortByLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.title = self.collectionType
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateItems", name: PublicConstants.CartUpdated, object: nil)
     }
     
     var items:[FoodItem] = []
     var collectionType:String!
+    var sortVisible = false
     
     private struct Constants {
         static let ShowFoodSegue = "SHOW_FOOD"
@@ -36,6 +39,12 @@ class FoodSelectViewController: UIViewController, UICollectionViewDataSource, UI
             alert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             presentViewController(alert, animated: true, completion: nil)
         }
+        self.collectionView.reloadData()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.toggleSortView(true)
     }
     
     func updateItems() {
@@ -74,5 +83,64 @@ class FoodSelectViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     
+    // MARK: Sort Actions
+    @IBAction func showSort(sender: UIBarButtonItem) {
+        if (self.sortVisible) {
+            self.toggleSortView(true)
+        } else {
+            self.toggleSortView(false)
+        }
+    }
+    
+    @IBAction func sortByAlphaBetical(sender: UIButton) {
+        self.sortByNutrient("name")
+    }
+    
+    @IBAction func sortByCalories(sender: UIButton) {
+        self.sortByNutrient("calories")
+    }
+    
+    @IBAction func sortByProtein(sender: UIButton) {
+        self.sortByNutrient("protein")
+    }
+    
+    @IBAction func sortByCarbs(sender: UIButton) {
+        self.sortByNutrient("carbs")
+    }
+    
+    @IBAction func sortByFats(sender: UIButton) {
+        self.sortByNutrient("fats")
+    }
+    
+    private func toggleSortView(shouldHide:Bool) {
+        let height = CGFloat(shouldHide ? 0 : 40)
+        UIView.animateWithDuration(0.3, animations: {
+            var newFrame = self.sortView.frame
+            newFrame.size.height = height
+            self.sortView.frame = newFrame
+            self.sortView.alpha = height / 40.0
+        })
+        self.sortVisible = !shouldHide
+    }
+    
+    private func sortByNutrient(nutrient:String) {
+        switch (nutrient) {
+        case "calories":
+            self.items = self.items.sort({$0.calories < $1.calories})
+        case "fats":
+            self.items = self.items.sort({$0.fats < $1.fats})
+        case "carbs":
+            self.items = self.items.sort({$0.carbs < $1.carbs})
+        case "protein":
+            self.items = self.items.sort({$0.protein < $1.protein})
+        case "name":
+            self.items = self.items.sort({$0.name < $1.name})
+        default:
+            break
+        }
+        self.sortByLabel.text = "Sorted by \(nutrient)"
+//        self.toggleSortView(true)
+        self.collectionView.reloadData()
+    }
 
 }

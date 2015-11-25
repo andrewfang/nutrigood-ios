@@ -10,14 +10,22 @@
 struct ChatItem {
     var content:String!
     var type:ChatType!
+    var foodItem:FoodItem?
     
     init(content:String, type:ChatType) {
         self.content = content
         self.type = type
+    }
+    
+    init(content:FoodItem) {
+        self.content = content.name
+        self.type = ChatType.AIFood
+        self.foodItem = content
     }
 }
 
 enum ChatType {
     case User
     case AI
+    case AIFood
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492C75691C05466600C26C67 /* ChatFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C75681C05466600C26C67 /* ChatFoodTableViewCell.swift */; };
 		494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494432EE1BF53D0B0054CE82 /* AppDelegate.swift */; };
 		494432F41BF53D0B0054CE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F21BF53D0B0054CE82 /* Main.storyboard */; };
 		494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494432F51BF53D0B0054CE82 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		492C75681C05466600C26C67 /* ChatFoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatFoodTableViewCell.swift; sourceTree = "<group>"; };
 		494432EB1BF53D0B0054CE82 /* nutrigood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nutrigood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494432EE1BF53D0B0054CE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494432F31BF53D0B0054CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				49DA213D1BF6A0AD00C474DB /* UIPaddedLabel.swift */,
 				497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */,
 				49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */,
+				492C75681C05466600C26C67 /* ChatFoodTableViewCell.swift */,
 			);
 			name = Tips;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
 				494B4FFA1C02E02400D827CE /* Global.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
+				492C75691C05466600C26C67 /* ChatFoodTableViewCell.swift in Sources */,
 				CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */,
 				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,
 				49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */,

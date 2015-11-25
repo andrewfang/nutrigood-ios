@@ -18,21 +18,76 @@ struct PublicConstants {
     static let Fats = "fats"
     static let Calories = "calories"
     static let Date = "date"
+    static let UserDefaultCarb = "UserDefaultCarbKey"
+    static let UserDefaultProtein = "UserDefaultProteinKey"
+    static let UserDefaultFats = "UserDefaultFatKey"
+    static let UserDefaultCalories = "UserDefaultCalKey"
+    static let AllergenDict = [
+        "pork":"🐷",
+        "beef":"🐮",
+        "meat":"🍖",
+        "poultry":"🐔",
+        "nuts":"🌰",
+        "dairy":"🧀",
+        "gluten":"🍞",
+    ]
 }
 
-class NutritionData: AnyObject {
-    var protein:Double!
-    var carbs:Double!
-    var fats:Double!
-    var calories:Int!
-    var date:NSDate!
+class Profile {
+    static var carbs:Double {
+        get {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            let setDefault = userDefault.doubleForKey(PublicConstants.UserDefaultCarb)
+            if (setDefault < 1) {
+                return 310.0
+            }
+            return setDefault
+        } set {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            userDefault.setDouble(newValue, forKey: PublicConstants.UserDefaultCarb)
+        }
+    }
     
-    init(protein:Double, carbs:Double, fats:Double, calories:Int, date:NSDate) {
-        self.protein = protein
-        self.carbs = carbs
-        self.fats = fats
-        self.calories = calories
-        self.date = date
+    static var fats:Double {
+        get {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            let setDefault = userDefault.doubleForKey(PublicConstants.UserDefaultFats)
+            if (setDefault < 1) {
+                return 65.0
+            }
+            return setDefault
+        } set {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            userDefault.setDouble(newValue, forKey: PublicConstants.UserDefaultFats)
+        }
+    }
+    
+    static var protein:Double {
+        get {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            let setDefault = userDefault.doubleForKey(PublicConstants.UserDefaultProtein)
+            if (setDefault < 1) {
+                return 56.0
+            }
+            return setDefault
+        } set {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            userDefault.setDouble(newValue, forKey: PublicConstants.UserDefaultProtein)
+        }
+    }
+    
+    static var calories:Int {
+        get {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            let setDefault = userDefault.integerForKey(PublicConstants.UserDefaultCalories)
+            if (setDefault < 1) {
+                return 2500
+            }
+            return setDefault
+        } set {
+            let userDefault = NSUserDefaults.standardUserDefaults()
+            userDefault.setInteger(newValue, forKey: PublicConstants.UserDefaultCalories)
+        }
     }
 }
 

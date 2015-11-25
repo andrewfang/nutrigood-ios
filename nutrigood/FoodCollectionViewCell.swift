@@ -35,13 +35,16 @@ class FoodCollectionViewCell: UICollectionViewCell {
                 self.foodImage.image = image
             } else {
                 self.foodImage.image = UIImage(named: "testImage")!
+                let foodName = self.foodItem.name
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
                     if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(self.foodItem.name) {
                         if let data = NSData(contentsOfURL: url) {
                             dispatch_async(dispatch_get_main_queue()){
-                                let flickrImage = UIImage(data: data)
-                                self.foodImage.image = flickrImage
-                                self.foodItem.image = flickrImage
+                                if (foodName == self.foodItem.name) {
+                                    let flickrImage = UIImage(data: data)
+                                    self.foodImage.image = flickrImage
+                                    self.foodItem.image = flickrImage
+                                }
                             }
                         }
                     }

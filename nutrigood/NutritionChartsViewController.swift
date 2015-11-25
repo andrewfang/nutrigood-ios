@@ -50,10 +50,9 @@ class NutritionChartsViewController: UIViewController {
             }
         }
         
-        // TODO: Fix these magic numbers to pull from recommended or set. Also fix in BubbleChartTableViewCell
-        let tooFat = updateFats(totalFat, maxFat: 65.0)
-        let tooProtein = updateProtein(totalProtein, maxProtein: 56.0)
-        let tooCarb = updateCarbs(totalCarbs, maxCarbs:310.0)
+        let tooFat = updateFats(totalFat, maxFat: Profile.fats)
+        let tooProtein = updateProtein(totalProtein, maxProtein: Profile.protein)
+        let tooCarb = updateCarbs(totalCarbs, maxCarbs:Profile.carbs)
         updateCalories(totalCalories)
         
         var excess = ""
