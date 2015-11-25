@@ -33,6 +33,7 @@
 		CF9235FF1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */; };
 		CF9236031BFEFEB5001EC1F3 /* TableViewMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236021BFEFEB5001EC1F3 /* TableViewMoreCell.swift */; };
 		CF9236051BFF02C2001EC1F3 /* ProfileConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236041BFF02C2001EC1F3 /* ProfileConstants.swift */; };
+		CF9236091BFF09F2001EC1F3 /* TableViewInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236081BFF09F2001EC1F3 /* TableViewInfoCell.swift */; };
 		CFA029A11BFE6FC200AB6B74 /* TableViewSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA029A01BFE6FC200AB6B74 /* TableViewSliderCell.swift */; };
 		CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +111,7 @@
 		CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSwitchCell.swift; sourceTree = "<group>"; };
 		CF9236021BFEFEB5001EC1F3 /* TableViewMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewMoreCell.swift; sourceTree = "<group>"; };
 		CF9236041BFF02C2001EC1F3 /* ProfileConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileConstants.swift; sourceTree = "<group>"; };
+		CF9236081BFF09F2001EC1F3 /* TableViewInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewInfoCell.swift; sourceTree = "<group>"; };
 		CFA029A01BFE6FC200AB6B74 /* TableViewSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSliderCell.swift; sourceTree = "<group>"; };
 		CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMoreRestrictionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +215,7 @@
 				CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */,
 				CF9236021BFEFEB5001EC1F3 /* TableViewMoreCell.swift */,
 				CF9236041BFF02C2001EC1F3 /* ProfileConstants.swift */,
+				CF9236081BFF09F2001EC1F3 /* TableViewInfoCell.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				4944331A1BF54E7C0054CE82 /* CartTableViewController.swift in Sources */,
 				4944330E1BF546BF0054CE82 /* TipsTableViewController.swift in Sources */,
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
+				CF9236091BFF09F2001EC1F3 /* TableViewInfoCell.swift in Sources */,
 				4944330C1BF545800054CE82 /* FoodSelectTableViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
 				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
