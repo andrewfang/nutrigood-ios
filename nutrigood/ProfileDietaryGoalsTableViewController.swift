@@ -1,5 +1,5 @@
 //
-//  ProfileDietaryGoals.swift
+//  ProfileDietaryGoalsTableViewController.swift
 //  nutrigood
 //
 //  Created by Jorge Garcia Mesa on 11/18/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileDietaryGoals: UITableViewController {
+class ProfileDietaryGoalsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

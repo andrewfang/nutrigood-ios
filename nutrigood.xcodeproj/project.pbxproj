@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		492C75691C05466600C26C67 /* ChatFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492C75681C05466600C26C67 /* ChatFoodTableViewCell.swift */; };
+		492C756F1C055DC700C26C67 /* TableViewInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236081BFF09F2001EC1F3 /* TableViewInfoCell.swift */; };
 		494432EF1BF53D0B0054CE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494432EE1BF53D0B0054CE82 /* AppDelegate.swift */; };
 		494432F41BF53D0B0054CE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F21BF53D0B0054CE82 /* Main.storyboard */; };
 		494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494432F51BF53D0B0054CE82 /* Assets.xcassets */; };
@@ -34,11 +35,10 @@
 		49DA21401BF6A57B00C474DB /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */; };
 		49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511A81BFA8C1700F0255F /* DataTableViewController.swift */; };
 		49E511AB1BFA8C9800F0255F /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */; };
-		CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */; };
+		CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift */; };
 		CF9235FF1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */; };
 		CF9236031BFEFEB5001EC1F3 /* TableViewMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236021BFEFEB5001EC1F3 /* TableViewMoreCell.swift */; };
 		CF9236051BFF02C2001EC1F3 /* ProfileConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236041BFF02C2001EC1F3 /* ProfileConstants.swift */; };
-		CF9236091BFF09F2001EC1F3 /* TableViewInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9236081BFF09F2001EC1F3 /* TableViewInfoCell.swift */; };
 		CFA029A11BFE6FC200AB6B74 /* TableViewSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA029A01BFE6FC200AB6B74 /* TableViewSliderCell.swift */; };
 		CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */; };
 /* End PBXBuildFile section */
@@ -117,7 +117,7 @@
 		49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		49E511A81BFA8C1700F0255F /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		49E511AA1BFA8C9800F0255F /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
-		CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDietaryGoals.swift; sourceTree = "<group>"; };
+		CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDietaryGoalsTableViewController.swift; sourceTree = "<group>"; };
 		CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewSwitchCell.swift; sourceTree = "<group>"; };
 		CF9236021BFEFEB5001EC1F3 /* TableViewMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewMoreCell.swift; sourceTree = "<group>"; };
 		CF9236041BFF02C2001EC1F3 /* ProfileConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileConstants.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				494433091BF545190054CE82 /* ProfileTableViewController.swift */,
-				CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift */,
+				CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift */,
 				CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */,
 				CFA029A01BFE6FC200AB6B74 /* TableViewSliderCell.swift */,
 				CF9235FE1BFEEF3A001EC1F3 /* TableViewSwitchCell.swift */,
@@ -362,9 +362,10 @@
 				494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */,
 				49A37E811BFFAA0A00593BF9 /* TipsViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
-				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoals.swift in Sources */,
+				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift in Sources */,
 				494B4FFA1C02E02400D827CE /* Global.swift in Sources */,
 				494433161BF54A080054CE82 /* Database.swift in Sources */,
+				492C756F1C055DC700C26C67 /* TableViewInfoCell.swift in Sources */,
 				492C75691C05466600C26C67 /* ChatFoodTableViewCell.swift in Sources */,
 				CFF2B4C11BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift in Sources */,
 				49E511A91BFA8C1700F0255F /* DataTableViewController.swift in Sources */,

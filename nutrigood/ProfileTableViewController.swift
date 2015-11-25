@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController, UIPickerViewDelegate{
+class ProfileTableViewController: UITableViewController {
     
     var profileName:String {
         get {
@@ -60,10 +60,15 @@ class ProfileTableViewController: UITableViewController, UIPickerViewDelegate{
         return 44 //#magic number looked up online
     }
     
+    var pickerData:[String] = [String]()
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewInfoCell{
-            cell.InfoLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
+            cell.infoLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
+            cell.pickerTitles = ["Male", "Female"]
             
+            cell.infoPicker.delegate = cell
+            cell.infoPicker.dataSource = cell
             return cell
         }
         return tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)

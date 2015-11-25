@@ -30,7 +30,13 @@ class TableViewSliderCell: UITableViewCell{
         var currentValue = Int(sender.value)
         self.AmountLabel.text = "\(currentValue)"
 
-//        NSUserDefaults.standardUserDefaults().setFloat(sender.value, forKey: name)
+        // This will add the new value to the user defaults. Make sure you do this for carbs, fats, calories, and protein. All the naming conventions should be similar.
+        // Profile.carbs
+        // Profile.fats
+        // Profile.protein
+        // Profile.calories
+        
+        //  Profile.carbs = Double(sender.value)
     }
     
 }
