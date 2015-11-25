@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileTableViewController: UITableViewController {
+class ProfileTableViewController: UITableViewController, UIPickerViewDelegate{
     
     var profileName:String {
         get {
@@ -23,12 +23,18 @@ class ProfileTableViewController: UITableViewController {
     
     private struct constants{
         static let infoSection = 0
+        static let genderSection = 0
         static let infoSectionTitle = "Info"
         static let ReuseCellIdentifier = "resuseTableCell"
         static let DietaryGoalsSegue = "DIETARY_GOALS"
     }
     
     private var infoList: [String] = ["Age","Gender", "Weight", "Height"]
+    private var genderValues: [String] = ["54", "Male", "190 lb", "72 in"]
+//    private var age = []
+//    private var gender = ["Female", "Male","Other"] //should think about other genders
+//    private var weight = []
+//    private var height = []
     
     //# the action
     @IBAction func DietaryGoalClick(sender: AnyObject) {
@@ -55,10 +61,12 @@ class ProfileTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)
-        cell.textLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
-        
-        return cell
+        if let cell = tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewInfoCell{
+            cell.InfoLabel?.text = infoList[indexPath.row] //#fill in with the names of the sections
+            
+            return cell
+        }
+        return tableView.dequeueReusableCellWithIdentifier(constants.ReuseCellIdentifier, forIndexPath: indexPath)
     }
     
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

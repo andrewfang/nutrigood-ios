@@ -27,7 +27,8 @@ class TableViewSliderCell: UITableViewCell{
     var name:String!
     
     @IBAction func SliderValueChange(sender: UISlider) {
-        self.AmountLabel.text = "\(sender.value)"
+        var currentValue = Int(sender.value)
+        self.AmountLabel.text = "\(currentValue)"
 
 //        NSUserDefaults.standardUserDefaults().setFloat(sender.value, forKey: name)
     }

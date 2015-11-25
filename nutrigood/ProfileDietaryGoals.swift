@@ -50,6 +50,10 @@ class ProfileDietaryGoals: UITableViewController {
     private var restrictionsList: [String] = ["Vegetarian","Vegan"]
     
     private var moreList: [String] = ["More"]
+    
+    private var sliderValues: [String] = ["3000","100","400","50"]
+    private var sliderValues2: [Float] = [3000,100,400,50]
+
 
     // MARK: - Table view data source
 
@@ -103,6 +107,7 @@ class ProfileDietaryGoals: UITableViewController {
         case Constants.MaxIntakeSection:
             if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSliderCell{
                 cell.IntakeLabel?.text = intakeList[indexPath.row]
+                cell.IntakeSlider?.maximumValue = sliderValues2[indexPath.row]
                 //set the cell.names
 //                cell.IntakeSlider.setValue(NSUserDefaults.standardUserDefaults().floatForKey(cell.name), animated: true)
                 //set the switch button on
@@ -126,8 +131,14 @@ class ProfileDietaryGoals: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: moreList[0])
+        switch (indexPath.section){
+        case Constants.MoreSection:
+            performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: nil)
+        default:
+            break
+//        performSegueWithIdentifier(Constants.DietaryGoalsSegue, sender: moreList[0])
     }
+}
 
     /*
     // Override to support conditional editing of the table view.

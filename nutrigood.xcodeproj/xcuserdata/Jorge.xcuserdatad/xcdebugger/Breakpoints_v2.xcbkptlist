@@ -26,7 +26,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodDetailsViewController.swift"
-                  timestampString = "469697861.005234"
+                  timestampString = "470111430.743818"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodDetailsViewController.swift"
-                  timestampString = "469697861.00578"
+                  timestampString = "470111430.744181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -74,7 +74,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "469697861.008487"
+                  timestampString = "470111430.74663"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -89,7 +89,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "469697861.00943"
+                  timestampString = "470111430.74725"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -104,7 +104,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "469697861.009994"
+                  timestampString = "470111430.747536"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -119,7 +119,7 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "469697861.010425"
+                  timestampString = "470111430.747752"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -136,13 +136,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nutrigood/ProfileDietaryGoals.swift"
-            timestampString = "469696379.355358"
+            timestampString = "470105034.489517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "nutrigood/ProfileTableViewController.swift"
+            timestampString = "470090764.972875"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "ProfileTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
