@@ -12,4 +12,5 @@ class ChatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var content: UILabel!
     
+    var tip:Database.HtmlTip?
 }

@@ -86,7 +86,7 @@ class MealSelectViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.foodLabel.text = mealName
                 cell.foodImg.image = UIImage(named: "testImage")
                 dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
-                    if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(mealName) {
+                    if let url = FoodItem.getImageURLFromFlickrWithSearchQuery(mealName + " meal") {
                         if let data = NSData(contentsOfURL: url) {
                             dispatch_async(dispatch_get_main_queue()){
                                 cell.foodImg.image = UIImage(data: data)

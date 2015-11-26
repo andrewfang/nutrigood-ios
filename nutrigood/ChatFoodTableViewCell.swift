@@ -10,13 +10,15 @@ import UIKit
 
 class ChatFoodTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var foodName: UILabel!
+    @IBOutlet weak var foodName: UIButton!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var addToCartButton: UIButton!
     
+    weak var refViewController:UIViewController?
+    
     var foodItem:FoodItem! {
         didSet {
-            self.foodName.text = self.foodItem.name
+            self.foodName.setTitle(self.foodItem.name, forState: .Normal)
             if (self.foodItem.image != nil) {
                 self.foodImage.image = self.foodItem.image
             } else {
@@ -50,4 +52,7 @@ class ChatFoodTableViewCell: UITableViewCell {
         NSNotificationCenter.defaultCenter().postNotificationName(PublicConstants.UpdateNutrition, object: nil)
     }
 
+    @IBAction func showDetails(sender:UIButton) {
+        self.refViewController?.performSegueWithIdentifier(TipsViewController.CellSegues.FoodDetailSegue, sender: self.foodItem)
+    }
 }

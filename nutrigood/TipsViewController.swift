@@ -21,6 +21,12 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         static let AICell = "youCell"
         static let AIFoodCell = "foodCell"
     }
+    
+    struct CellSegues {
+        static let FoodDetailSegue = "SHOW_FOOD_DETAIL"
+        static let ShowWebSegue = "SHOW_WEB"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Tips"
@@ -32,6 +38,8 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let bkgd = UIImage(named: "chatBackground") {
             self.view.layer.contents = bkgd.CGImage
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "cartUpdated", name: PublicConstants.CartUpdated, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -73,8 +81,15 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Set the text to be the chat item's content
         if let cell = cell as? ChatTableViewCell {
             cell.content.text = chatItem.content
+            if let tip = chatItem.tip {
+                cell.tip = tip
+                if tip.url != nil {
+                    cell.content.text = cell.content.text! + " 🔗"
+                }
+            }
         } else if let cell = cell as? ChatFoodTableViewCell {
             cell.foodItem = chatItem.foodItem!
+            cell.refViewController = self
         }
         
         cell.layoutIfNeeded()
@@ -91,7 +106,7 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
         
         let tip = Database.getRandomTip()
-        self.chats.append(ChatItem(content: tip, type: .AI))
+        self.chats.append(ChatItem(tip: tip, type: .AI))
         self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
 
         self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.chats.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: false)
@@ -152,5 +167,35 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.mealChatOptions.alpha = 0.0
             self.firstChatOptions.alpha = 1.0
         })
+    }
+    
+    func cartUpdated() {
+        self.tableView.reloadData()
+    }
+    
+    // MARK: Segues kicked off by cell
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == CellSegues.FoodDetailSegue {
+            if let item = sender as? FoodItem,
+                let destVc = segue.destinationViewController as? FoodDetailsViewController {
+                    destVc.item = item
+            }
+        } else if segue.identifier == CellSegues.ShowWebSegue {
+            if let link = sender as? NSURL,
+                let navVC = segue.destinationViewController as? UINavigationController {
+                    if let destVc = navVC.viewControllers.first as? WebViewController {
+                        destVc.linkUrl = link
+                    }
+            }
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let urlString = self.chats[indexPath.item].tip?.url {
+            if let url = NSURL(string: urlString) {
+                performSegueWithIdentifier(CellSegues.ShowWebSegue, sender: url)
+            }
+        }
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
 }

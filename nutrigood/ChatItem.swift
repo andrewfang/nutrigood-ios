@@ -11,10 +11,17 @@ struct ChatItem {
     var content:String!
     var type:ChatType!
     var foodItem:FoodItem?
+    var tip:Database.HtmlTip?
     
     init(content:String, type:ChatType) {
         self.content = content
         self.type = type
+    }
+    
+    init(tip:Database.HtmlTip, type:ChatType) {
+        self.content = tip.tip
+        self.type = type
+        self.tip = tip
     }
     
     init(content:FoodItem) {

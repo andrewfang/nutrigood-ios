@@ -22,6 +22,7 @@
 		494B4FFA1C02E02400D827CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF91C02E02400D827CE /* Global.swift */; };
 		496BEE6E1C03A5D2003EDE91 /* LineChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
+		498AE83B1C063217005A837F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AE83A1C063217005A837F /* WebViewController.swift */; };
 		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
 		49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F891BFA9D6200360D21 /* Colors.swift */; };
 		49A37E4C1BFD98F800593BF9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A37E471BFD981B00593BF9 /* Charts.framework */; };
@@ -105,6 +106,7 @@
 		494B4FF91C02E02400D827CE /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartTableViewCell.swift; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
+		498AE83A1C063217005A837F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
 		49A22F891BFA9D6200360D21 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		49A37E401BFD981B00593BF9 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */,
 				49DA213F1BF6A57B00C474DB /* ChatTableViewCell.swift */,
 				492C75681C05466600C26C67 /* ChatFoodTableViewCell.swift */,
+				498AE83A1C063217005A837F /* WebViewController.swift */,
 			);
 			name = Tips;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */,
 				49A37E811BFFAA0A00593BF9 /* TipsViewController.swift in Sources */,
+				498AE83B1C063217005A837F /* WebViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,
 				CF05FD3B1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift in Sources */,
 				494B4FFA1C02E02400D827CE /* Global.swift in Sources */,

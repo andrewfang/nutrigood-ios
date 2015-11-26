@@ -87,21 +87,36 @@ class Database {
         "Not all fats are bad for you. In fact, transfats are the only things that suck. You see, the word trans comes from transit, which is bad.",
     ]
     
-    static var nutritionTips:[String] = [
-        "Try not to eat late at night, just before bed.",
-        "It’s best for breakfast to be your largest meal, lunch to be your second largest, and dinner to be your smallest, since you will be burning energy throughout the day, and burning much less energy when you sleep!",
-        "Eat smaller meals more frequently throughout the day.",
-        "Lean proteins (chicken, fish, tofu) are key to building the type of healthy muscle mass that your body thrives on.",
-        "In the United States, the most common dietary nutritional deficiency is Vitamin B6.  Other Vitamins (A, C, D, E, K), as well as minerals (Calcium, Magnesium, Iron) are an extremely important part of your diet, for bone, organ, muscle, skin and cell health.  Get your fix on vitamins by eating lots of fruits and vegetables.  Bran rice is great for vitamin B6.",
-        "Don’t drink sugar calories!  Sugary drinks are the most fattening things you can put into your body because the liquid sugar calories don’t get registered by the brain in the same way as calories from solid foods (http://www.ncbi.nlm.nih.gov/pubmed/10878689).  Fruit juice is almost as bad as soda!",
-        "Eat lots of nuts - they are loaded with key vitamins and minerals, as well as fiber (http://ndb.nal.usda.gov/ndb/foods/show/3667).  Nuts are super because they can help you lose weight, fight type 2 diabetes and heart disease.",
-        "Avoid processed foods: they have been engineered to be \"hyper-rewardin,\" so they trick our brains into eating more than we need!",
-        "Eating 100 less calories per day can amount to some big savings: up to 10lbs per year!",
-        "If you are big on cardio, it’s important to build large energy stores with complex carbohydrates: regular pasta and rice are your friends!",
-        "Want to get better results from your weightlifting sessions?  Follow-up with some chocolate milk or some of these recovery foods: http://www.outsideonline.com/1898066/top-10-recovery-foods",
-        "Wait around 2 hours after eating to work out.  Your body will burn more fat during the workout!",
-        "Your metabolism is the engine that transforms the food you eat into usable energy for your body. Research shows that muscle mass is one of the key determinants of metabolic rate: balancing cardio sessions with resistance & weight training is essential to maintaining muscle mass, and a healthy and hungry metabolism!",
+    static var nutritionTips:[HtmlTip] = [
+        HtmlTip("Try not to eat late at night, just before bed."),
+        HtmlTip("It’s best for breakfast to be your largest meal, lunch to be your second largest, and dinner to be your smallest, since you will be burning energy throughout the day, and burning much less energy when you sleep!"),
+        HtmlTip("Eat smaller meals more frequently throughout the day."),
+        HtmlTip("Lean proteins (chicken, fish, tofu) are key to building the type of healthy muscle mass that your body thrives on."),
+        HtmlTip("In the United States, the most common dietary nutritional deficiency is Vitamin B6.  Other Vitamins (A, C, D, E, K), as well as minerals (Calcium, Magnesium, Iron) are an extremely important part of your diet, for bone, organ, muscle, skin and cell health.  Get your fix on vitamins by eating lots of fruits and vegetables.  Bran rice is great for vitamin B6."),
+        HtmlTip("Don’t drink sugar calories!  Sugary drinks are the most fattening things you can put into your body because the liquid sugar calories don’t get registered by the brain in the same way as calories from solid foods.  Fruit juice is almost as bad as soda!", "http://www.ncbi.nlm.nih.gov/pubmed/10878689"),
+        HtmlTip("Eat lots of nuts - they are loaded with key vitamins and minerals, as well as fiber.  Nuts are super because they can help you lose weight, fight type 2 diabetes and heart disease.", "http://ndb.nal.usda.gov/ndb/foods/show/3667"),
+        HtmlTip("Avoid processed foods: they have been engineered to be \"hyper-rewardin,\" so they trick our brains into eating more than we need!"),
+        HtmlTip("Eating 100 less calories per day can amount to some big savings: up to 10lbs per year!"),
+        HtmlTip("If you are big on cardio, it’s important to build large energy stores with complex carbohydrates: regular pasta and rice are your friends!"),
+        HtmlTip("Want to get better results from your weightlifting sessions?  Follow-up with some chocolate milk or some of these recovery foods: link ", "http://www.outsideonline.com/1898066/top-10-recovery-foods"),
+        HtmlTip("Wait around 2 hours after eating to work out.  Your body will burn more fat during the workout!"),
+        HtmlTip("Your metabolism is the engine that transforms the food you eat into usable energy for your body. Research shows that muscle mass is one of the key determinants of metabolic rate: balancing cardio sessions with resistance & weight training is essential to maintaining muscle mass, and a healthy and hungry metabolism!"),
     ]
+    
+    struct HtmlTip {
+        
+        var tip:String!
+        var url:String?
+        
+        init(_ tip:String) {
+            self.tip = tip
+        }
+        
+        init(_ tip:String, _ url:String) {
+            self.tip = tip
+            self.url = url
+        }
+    }
     
     static var defaultResponse:[String] = [
         "I see",
@@ -128,7 +143,7 @@ class Database {
     }
     
     // MARK: Tip stuff
-    static func getRandomTip() -> String {
+    static func getRandomTip() -> HtmlTip {
         let idx = Int(arc4random_uniform(UInt32(nutritionTips.count)))
         return nutritionTips[idx]
     }
