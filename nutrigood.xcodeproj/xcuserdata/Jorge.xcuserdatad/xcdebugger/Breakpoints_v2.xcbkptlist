@@ -22,16 +22,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "nutrigood.FoodDetailsViewController.init (nutrigood.FoodDetailsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; nutrigood.FoodDetailsViewController"
+                  symbolName = "nutrigood.FoodDetailsViewController.__deallocating_deinit"
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodDetailsViewController.swift"
-                  timestampString = "470111430.743818"
+                  timestampString = "470130157.593896"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "70">
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "nutrigood.FoodDetailsViewController.init (nutrigood.FoodDetailsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; nutrigood.FoodDetailsViewController"
+                  moduleName = "nutrigood"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodDetailsViewController.swift"
+                  timestampString = "470130157.59416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "72">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +56,12 @@
                   moduleName = "nutrigood"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodDetailsViewController.swift"
-                  timestampString = "470111430.744181"
+                  timestampString = "470130157.594376"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -65,68 +80,6 @@
             endingLineNumber = "16"
             landmarkName = "FoodTableViewCell"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "nutrigood.FoodTableViewCell.addItemButton.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
-                  moduleName = "nutrigood"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "470111430.74663"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "nutrigood.FoodTableViewCell.addItemButton.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIButton&gt;"
-                  moduleName = "nutrigood"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "470111430.74725"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "nutrigood.FoodTableViewCell.init (nutrigood.FoodTableViewCell.Type)(style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; nutrigood.FoodTableViewCell"
-                  moduleName = "nutrigood"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "470111430.747536"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "77">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "nutrigood.FoodTableViewCell.init (nutrigood.FoodTableViewCell.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;nutrigood.FoodTableViewCell&gt;"
-                  moduleName = "nutrigood"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jorge/Desktop/nutrigood-ios/nutrigood/FoodTableViewCell.swift"
-                  timestampString = "470111430.747752"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "37">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -152,13 +105,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nutrigood/ProfileTableViewController.swift"
-            timestampString = "470090764.972875"
+            timestampString = "470129800.919554"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "ProfileTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "pickerTitleOptions"
+            landmarkType = "19">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
