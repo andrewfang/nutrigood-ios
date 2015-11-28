@@ -19,6 +19,13 @@ class ChatFoodTableViewCell: UITableViewCell {
     var foodItem:FoodItem! {
         didSet {
             self.foodName.setTitle(self.foodItem.name, forState: .Normal)
+            
+            if (self.foodItem.inCart) {
+                self.addToCartButton.setImage(UIImage(named: "check"), forState: .Normal)
+            } else {
+                self.addToCartButton.setImage(UIImage(named: "plus"), forState: .Normal)
+            }
+            
             if (self.foodItem.image != nil) {
                 self.foodImage.image = self.foodItem.image
             } else {

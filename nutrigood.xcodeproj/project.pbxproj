@@ -21,6 +21,13 @@
 		494B4FF71C000B1D00D827CE /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */; };
 		494B4FFA1C02E02400D827CE /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B4FF91C02E02400D827CE /* Global.swift */; };
 		496BEE6E1C03A5D2003EDE91 /* LineChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */; };
+		497B496C1C07893C00765A46 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497B496A1C07893C00765A46 /* Interface.storyboard */; };
+		497B496E1C07893C00765A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497B496D1C07893C00765A46 /* Assets.xcassets */; };
+		497B49751C07893C00765A46 /* NutriGoodWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 497B49741C07893C00765A46 /* NutriGoodWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		497B497A1C07893C00765A46 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B49791C07893C00765A46 /* InterfaceController.swift */; };
+		497B497C1C07893C00765A46 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B497B1C07893C00765A46 /* ExtensionDelegate.swift */; };
+		497B497E1C07893C00765A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497B497D1C07893C00765A46 /* Assets.xcassets */; };
+		497B49821C07893C00765A46 /* NutriGoodWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 497B49681C07893C00765A46 /* NutriGoodWatch.app */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
 		498AE83B1C063217005A837F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AE83A1C063217005A837F /* WebViewController.swift */; };
 		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
@@ -45,6 +52,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		497B49761C07893C00765A46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494432E31BF53D0B0054CE82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 497B49731C07893C00765A46;
+			remoteInfo = "NutriGoodWatch Extension";
+		};
+		497B49801C07893C00765A46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 494432E31BF53D0B0054CE82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 497B49671C07893C00765A46;
+			remoteInfo = NutriGoodWatch;
+		};
 		49A37E461BFD981B00593BF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49A37E401BFD981B00593BF9 /* Charts.xcodeproj */;
@@ -76,6 +97,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		497B498A1C07893C00765A46 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				497B49751C07893C00765A46 /* NutriGoodWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497B498C1C07893C00765A46 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				497B49821C07893C00765A46 /* NutriGoodWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49E511A71BFA826B00F0255F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,6 +148,15 @@
 		494B4FF61C000B1D00D827CE /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		494B4FF91C02E02400D827CE /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		496BEE6D1C03A5D2003EDE91 /* LineChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartTableViewCell.swift; sourceTree = "<group>"; };
+		497B49681C07893C00765A46 /* NutriGoodWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriGoodWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		497B496B1C07893C00765A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		497B496D1C07893C00765A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		497B496F1C07893C00765A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497B49741C07893C00765A46 /* NutriGoodWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "NutriGoodWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		497B49791C07893C00765A46 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		497B497B1C07893C00765A46 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		497B497D1C07893C00765A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		497B497F1C07893C00765A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		498AE83A1C063217005A837F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		497B49711C07893C00765A46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,6 +204,8 @@
 			children = (
 				49A37E401BFD981B00593BF9 /* Charts.xcodeproj */,
 				494432ED1BF53D0B0054CE82 /* nutrigood */,
+				497B49691C07893C00765A46 /* NutriGoodWatch */,
+				497B49781C07893C00765A46 /* NutriGoodWatch Extension */,
 				494432EC1BF53D0B0054CE82 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				494432EB1BF53D0B0054CE82 /* nutrigood.app */,
+				497B49681C07893C00765A46 /* NutriGoodWatch.app */,
+				497B49741C07893C00765A46 /* NutriGoodWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,6 +301,27 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		497B49691C07893C00765A46 /* NutriGoodWatch */ = {
+			isa = PBXGroup;
+			children = (
+				497B496A1C07893C00765A46 /* Interface.storyboard */,
+				497B496D1C07893C00765A46 /* Assets.xcassets */,
+				497B496F1C07893C00765A46 /* Info.plist */,
+			);
+			path = NutriGoodWatch;
+			sourceTree = "<group>";
+		};
+		497B49781C07893C00765A46 /* NutriGoodWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				497B49791C07893C00765A46 /* InterfaceController.swift */,
+				497B497B1C07893C00765A46 /* ExtensionDelegate.swift */,
+				497B497D1C07893C00765A46 /* Assets.xcassets */,
+				497B497F1C07893C00765A46 /* Info.plist */,
+			);
+			path = "NutriGoodWatch Extension";
+			sourceTree = "<group>";
+		};
 		49A37E411BFD981B00593BF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,16 +343,52 @@
 				494432E81BF53D0B0054CE82 /* Frameworks */,
 				494432E91BF53D0B0054CE82 /* Resources */,
 				49E511A71BFA826B00F0255F /* Embed Frameworks */,
+				497B498C1C07893C00765A46 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				49A37E4F1BFD98F800593BF9 /* PBXTargetDependency */,
+				497B49811C07893C00765A46 /* PBXTargetDependency */,
 			);
 			name = nutrigood;
 			productName = nutrigood;
 			productReference = 494432EB1BF53D0B0054CE82 /* nutrigood.app */;
 			productType = "com.apple.product-type.application";
+		};
+		497B49671C07893C00765A46 /* NutriGoodWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497B498B1C07893C00765A46 /* Build configuration list for PBXNativeTarget "NutriGoodWatch" */;
+			buildPhases = (
+				497B49661C07893C00765A46 /* Resources */,
+				497B498A1C07893C00765A46 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				497B49771C07893C00765A46 /* PBXTargetDependency */,
+			);
+			name = NutriGoodWatch;
+			productName = NutriGoodWatch;
+			productReference = 497B49681C07893C00765A46 /* NutriGoodWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		497B49731C07893C00765A46 /* NutriGoodWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 497B49891C07893C00765A46 /* Build configuration list for PBXNativeTarget "NutriGoodWatch Extension" */;
+			buildPhases = (
+				497B49701C07893C00765A46 /* Sources */,
+				497B49711C07893C00765A46 /* Frameworks */,
+				497B49721C07893C00765A46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NutriGoodWatch Extension";
+			productName = "NutriGoodWatch Extension";
+			productReference = 497B49741C07893C00765A46 /* NutriGoodWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -282,6 +402,12 @@
 				TargetAttributes = {
 					494432EA1BF53D0B0054CE82 = {
 						CreatedOnToolsVersion = 7.1;
+					};
+					497B49671C07893C00765A46 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					497B49731C07893C00765A46 = {
+						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
 			};
@@ -305,6 +431,8 @@
 			projectRoot = "";
 			targets = (
 				494432EA1BF53D0B0054CE82 /* nutrigood */,
+				497B49671C07893C00765A46 /* NutriGoodWatch */,
+				497B49731C07893C00765A46 /* NutriGoodWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -341,6 +469,23 @@
 				494432F91BF53D0B0054CE82 /* LaunchScreen.storyboard in Resources */,
 				494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */,
 				494432F41BF53D0B0054CE82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497B49661C07893C00765A46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497B496E1C07893C00765A46 /* Assets.xcassets in Resources */,
+				497B496C1C07893C00765A46 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		497B49721C07893C00765A46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497B497E1C07893C00765A46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,9 +529,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		497B49701C07893C00765A46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497B497C1C07893C00765A46 /* ExtensionDelegate.swift in Sources */,
+				497B497A1C07893C00765A46 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		497B49771C07893C00765A46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 497B49731C07893C00765A46 /* NutriGoodWatch Extension */;
+			targetProxy = 497B49761C07893C00765A46 /* PBXContainerItemProxy */;
+		};
+		497B49811C07893C00765A46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 497B49671C07893C00765A46 /* NutriGoodWatch */;
+			targetProxy = 497B49801C07893C00765A46 /* PBXContainerItemProxy */;
+		};
 		49A37E4F1BFD98F800593BF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Charts-iOS";
@@ -409,6 +573,14 @@
 				494432F81BF53D0B0054CE82 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		497B496A1C07893C00765A46 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				497B496B1C07893C00765A46 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -521,6 +693,66 @@
 			};
 			name = Release;
 		};
+		497B49831C07893C00765A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = NutriGoodWatch_Extension;
+				INFOPLIST_FILE = NutriGoodWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		497B49841C07893C00765A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = NutriGoodWatch_Extension;
+				INFOPLIST_FILE = NutriGoodWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		497B49851C07893C00765A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NutriGoodWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		497B49861C07893C00765A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NutriGoodWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -541,6 +773,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		497B49891C07893C00765A46 /* Build configuration list for PBXNativeTarget "NutriGoodWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497B49851C07893C00765A46 /* Debug */,
+				497B49861C07893C00765A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		497B498B1C07893C00765A46 /* Build configuration list for PBXNativeTarget "NutriGoodWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				497B49831C07893C00765A46 /* Debug */,
+				497B49841C07893C00765A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

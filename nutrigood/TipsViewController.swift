@@ -38,8 +38,6 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let bkgd = UIImage(named: "chatBackground") {
             self.view.layer.contents = bkgd.CGImage
         }
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "cartUpdated", name: PublicConstants.CartUpdated, object: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -48,6 +46,7 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.chats.append(ChatItem(content: "Hi, how can I help you?", type: .AI))
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.chats.count - 1, inSection: 0)], withRowAnimation: .Fade)
         }
+        self.tableView.reloadData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -167,10 +166,6 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.mealChatOptions.alpha = 0.0
             self.firstChatOptions.alpha = 1.0
         })
-    }
-    
-    func cartUpdated() {
-        self.tableView.reloadData()
     }
     
     // MARK: Segues kicked off by cell
