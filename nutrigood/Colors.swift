@@ -18,6 +18,7 @@ struct Colors {
     static let CarbColor = UIColor.rgba(41, 128, 185, 0.7)
     static let ProteinColor = UIColor.rgba(231, 76, 60, 0.7)
     static let CalorieColor = UIColor.rgba(211, 84, 0, 0.7)
+    static let EmptyColor = UIColor.rgba(245, 245, 245, 0.7)
 }
 
 extension UIColor {

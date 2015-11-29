@@ -18,10 +18,10 @@ struct PublicConstants {
     static let Fats = "fats"
     static let Calories = "calories"
     static let Date = "date"
-    static let UserDefaultCarb = "UserDefaultCarbKey"
-    static let UserDefaultProtein = "UserDefaultProteinKey"
-    static let UserDefaultFats = "UserDefaultFatKey"
-    static let UserDefaultCalories = "UserDefaultCalKey"
+    static let UserDefaultCarb = "Carbs"
+    static let UserDefaultProtein = "Protein"
+    static let UserDefaultFats = "Fats"
+    static let UserDefaultCalories = "Calories"
     static let AllergenDict = [
         "pork":"🐷",
         "beef":"🐮",

@@ -85,7 +85,7 @@ class NutritionChartsViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let colors = [Colors.FatColor, UIColor.clearColor()]
+        let colors = [Colors.FatColor, Colors.EmptyColor]
         let chartDataSet = PieChartDataSet(yVals: dataEntries)
         chartDataSet.colors = colors
         chartDataSet.drawValuesEnabled = false
@@ -113,7 +113,7 @@ class NutritionChartsViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let colors = [Colors.CarbColor, UIColor.clearColor()]
+        let colors = [Colors.CarbColor, Colors.EmptyColor]
         let chartDataSet = PieChartDataSet(yVals: dataEntries)
         chartDataSet.colors = colors
         chartDataSet.drawValuesEnabled = false
@@ -141,7 +141,7 @@ class NutritionChartsViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let colors = [Colors.ProteinColor, UIColor.clearColor()]
+        let colors = [Colors.ProteinColor, Colors.EmptyColor]
         let chartDataSet = PieChartDataSet(yVals: dataEntries)
         chartDataSet.colors = colors
         chartDataSet.drawValuesEnabled = false

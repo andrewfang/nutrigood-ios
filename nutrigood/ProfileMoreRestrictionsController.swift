@@ -34,6 +34,7 @@ class ProfileMoreRestrictionsController: UITableViewController {
     }
 
     private var restrictionsList: [String] = ["Peanut Allergies", "Lactose Intolerant", "Celiac", "Diabetic", "Vitamin Deficiencies"]
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
     // MARK: - Table view data source
 
@@ -57,8 +58,9 @@ class ProfileMoreRestrictionsController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSwitchCell{
-        cell.SwitchLabel?.text = restrictionsList[indexPath.row] //#fill in with the names of the sections
-        return cell
+            cell.SwitchLabel?.text = restrictionsList[indexPath.row] //#fill in with the names of the sections
+            cell.RestrictionsSwitch.on = self.userDefaults.boolForKey(restrictionsList[indexPath.row])
+            return cell
         }
         return tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath)
     }

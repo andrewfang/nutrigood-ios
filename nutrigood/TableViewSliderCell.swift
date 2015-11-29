@@ -27,16 +27,25 @@ class TableViewSliderCell: UITableViewCell{
     var name:String!
     
     @IBAction func SliderValueChange(sender: UISlider) {
-        var currentValue = Int(sender.value)
+        let currentValue = Int(sender.value)
         self.AmountLabel.text = "\(currentValue)"
 
-        // This will add the new value to the user defaults. Make sure you do this for carbs, fats, calories, and protein. All the naming conventions should be similar.
-        // Profile.carbs
-        // Profile.fats
-        // Profile.protein
-        // Profile.calories
+        guard let intakeType = self.IntakeLabel.text else {
+            return
+        }
         
-        //  Profile.carbs = Double(sender.value)
+        switch(intakeType) {
+        case PublicConstants.UserDefaultCalories:
+            Profile.calories = Int(sender.value)
+        case PublicConstants.UserDefaultCarb:
+            Profile.carbs = Double(sender.value)
+        case PublicConstants.UserDefaultFats:
+            Profile.fats = Double(sender.value)
+        case PublicConstants.UserDefaultProtein:
+            Profile.protein = Double(sender.value)
+        default:
+            break
+        }
     }
     
 }

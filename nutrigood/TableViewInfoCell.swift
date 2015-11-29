@@ -11,7 +11,6 @@ import UIKit
 class TableViewInfoCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var infoLabel: UILabel!
-//    @IBOutlet weak var ValueLabel: UILabel!
     @IBOutlet weak var infoPicker: UIPickerView!
     
     var pickerTitles:[String]!
@@ -27,4 +26,11 @@ class TableViewInfoCell: UITableViewCell, UIPickerViewDataSource, UIPickerViewDe
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerTitles[row]
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if let attr = self.infoLabel.text {
+            NSUserDefaults.standardUserDefaults().setInteger(row, forKey: attr)
+        }
+    }
+    
 }

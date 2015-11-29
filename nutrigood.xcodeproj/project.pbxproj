@@ -13,7 +13,6 @@
 		494432F41BF53D0B0054CE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F21BF53D0B0054CE82 /* Main.storyboard */; };
 		494432F61BF53D0B0054CE82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494432F51BF53D0B0054CE82 /* Assets.xcassets */; };
 		494432F91BF53D0B0054CE82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494432F71BF53D0B0054CE82 /* LaunchScreen.storyboard */; };
-		4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433091BF545190054CE82 /* ProfileTableViewController.swift */; };
 		494433141BF549D60054CE82 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433131BF549D60054CE82 /* FoodItem.swift */; };
 		494433161BF54A080054CE82 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494433151BF54A080054CE82 /* Database.swift */; };
 		4944331E1BF562A40054CE82 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */; };
@@ -28,6 +27,7 @@
 		497B497C1C07893C00765A46 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B497B1C07893C00765A46 /* ExtensionDelegate.swift */; };
 		497B497E1C07893C00765A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497B497D1C07893C00765A46 /* Assets.xcassets */; };
 		497B49821C07893C00765A46 /* NutriGoodWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 497B49681C07893C00765A46 /* NutriGoodWatch.app */; };
+		497B49901C095FFF00765A46 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B498F1C095FFF00765A46 /* ProfileViewController.swift */; };
 		497DE1DC1BF6D7DC00B014ED /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */; };
 		498AE83B1C063217005A837F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498AE83A1C063217005A837F /* WebViewController.swift */; };
 		49A22F861BFA989000360D21 /* BubbleChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */; };
@@ -140,7 +140,6 @@
 		494432F51BF53D0B0054CE82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494432F81BF53D0B0054CE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494432FA1BF53D0B0054CE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		494433091BF545190054CE82 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		494433131BF549D60054CE82 /* FoodItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
 		494433151BF54A080054CE82 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4944331D1BF562A40054CE82 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		497B497B1C07893C00765A46 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		497B497D1C07893C00765A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497B497F1C07893C00765A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497B498F1C095FFF00765A46 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		497DE1DB1BF6D7DC00B014ED /* ChatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		498AE83A1C063217005A837F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		49A22F851BFA989000360D21 /* BubbleChartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,7 +289,7 @@
 		494433121BF549BD0054CE82 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				494433091BF545190054CE82 /* ProfileTableViewController.swift */,
+				497B498F1C095FFF00765A46 /* ProfileViewController.swift */,
 				CF05FD3A1BFDAA5D00E1B18C /* ProfileDietaryGoalsTableViewController.swift */,
 				CFF2B4C01BFDD06200C9C07D /* ProfileMoreRestrictionsController.swift */,
 				CFA029A01BFE6FC200AB6B74 /* TableViewSliderCell.swift */,
@@ -506,8 +506,8 @@
 				49A22F8A1BFA9D6200360D21 /* Colors.swift in Sources */,
 				49A37E891BFFDC8300593BF9 /* NutritionChartsViewController.swift in Sources */,
 				49A37E7E1BFEFC9800593BF9 /* SelectionTableViewCell.swift in Sources */,
-				4944330A1BF545190054CE82 /* ProfileTableViewController.swift in Sources */,
 				494B4FF31C0009F600D827CE /* FoodSelectViewController.swift in Sources */,
+				497B49901C095FFF00765A46 /* ProfileViewController.swift in Sources */,
 				49A37E811BFFAA0A00593BF9 /* TipsViewController.swift in Sources */,
 				498AE83B1C063217005A837F /* WebViewController.swift in Sources */,
 				494433141BF549D60054CE82 /* FoodItem.swift in Sources */,

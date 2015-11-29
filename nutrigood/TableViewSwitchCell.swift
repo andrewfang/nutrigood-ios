@@ -22,5 +22,15 @@ class TableViewSwitchCell: UITableViewCell {
     }
 
     @IBOutlet weak var SwitchLabel: UILabel!
-    @IBOutlet weak var RestrictionsSwitch: UISwitch!
+    @IBOutlet weak var RestrictionsSwitch: UISwitch! {
+        didSet {
+            self.RestrictionsSwitch.addTarget(self, action: "switchValueChanged:", forControlEvents: .ValueChanged)
+        }
+    }
+    
+    func switchValueChanged(uiswitch:UISwitch) {
+        if let label = self.SwitchLabel.text {
+            NSUserDefaults.standardUserDefaults().setBool(self.RestrictionsSwitch.on, forKey: label)
+        }
+    }
 }

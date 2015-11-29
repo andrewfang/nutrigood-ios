@@ -28,9 +28,7 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
     // MARK: -- the weak linkes 
     
     @IBOutlet weak var textBoxValue: UITextField!
-    @IBAction func sliderUpdate(sender: AnyObject) {
-    
-    }
+    let userDefault = NSUserDefaults.standardUserDefaults()
     
     private struct Constants {
         static let MaxIntakeSection = 0
@@ -51,8 +49,9 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
     
     private var moreList: [String] = ["More"]
     
-//    private var sliderValues: [String] = ["3000","100","400","50"]
-    private var sliderValues: [Float] = [3000,100,400,50]
+
+    private var sliderValuesMin: [Float] = [1500,10,50,10]
+    private var sliderValuesMax: [Float] = [3000,100,400,70]
 
 
     // MARK: - Table view data source
@@ -107,15 +106,30 @@ class ProfileDietaryGoalsTableViewController: UITableViewController {
         case Constants.MaxIntakeSection:
             if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.ReuseCellIdentifier, forIndexPath: indexPath) as? TableViewSliderCell{
                 cell.IntakeLabel?.text = intakeList[indexPath.row]
-                cell.IntakeSlider?.maximumValue = sliderValues[indexPath.row]
+                cell.IntakeSlider?.minimumValue = sliderValuesMin[indexPath.row]
+                cell.IntakeSlider?.maximumValue = sliderValuesMax[indexPath.row]
                 //set the cell.names
-//                cell.IntakeSlider.setValue(NSUserDefaults.standardUserDefaults().floatForKey(cell.name), animated: true)
-                //set the switch button on
+
+                // set the cell values
+                switch(intakeList[indexPath.row]) {
+                case PublicConstants.UserDefaultCalories:
+                    cell.IntakeSlider.setValue(Float(Profile.calories), animated: false)
+                case PublicConstants.UserDefaultCarb:
+                    cell.IntakeSlider.setValue(Float(Profile.carbs), animated: false)
+                case PublicConstants.UserDefaultFats:
+                    cell.IntakeSlider.setValue(Float(Profile.fats), animated: false)
+                case PublicConstants.UserDefaultProtein:
+                    cell.IntakeSlider.setValue(Float(Profile.protein), animated: false)
+                default:
+                    break
+                }
+                cell.AmountLabel.text = "\(Int(cell.IntakeSlider.value))"
                 return cell
             }
         case Constants.DietaryRestrictSection:
             if let cell = tableView.dequeueReusableCellWithIdentifier(Constants.SwitchCellIdentifier, forIndexPath: indexPath) as? TableViewSwitchCell{
             cell.SwitchLabel?.text = restrictionsList[indexPath.row]
+            cell.RestrictionsSwitch.on = self.userDefault.boolForKey(restrictionsList[indexPath.row])
             return cell
             }
         case Constants.MoreSection:
