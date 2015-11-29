@@ -30,12 +30,12 @@ class Database {
         FoodItem(name: "Pita Pizza", cals: 415, fats: 45, carbs: 31, protein: 4, allergens: [], category: CollectionNames.Lunch),
         FoodItem(name: "Turkey Sliders", cals: 160, fats: 10, carbs: 7, protein: 5, allergens: ["poultry"], category: CollectionNames.Lunch),
         FoodItem(name: "Ceviche & Quinoa", cals: 540, fats: 15, carbs: 57, protein: 20, allergens: [], category: CollectionNames.Lunch),
-        FoodItem(name: "Fish Burger", cals: 616, fats: 17, carbs: 67, protein: 24, allergens: ["fish"], category: CollectionNames.Lunch),
+        FoodItem(name: "Fish Burger", cals: 616, fats: 17, carbs: 67, protein: 24, allergens: ["fish", "gluten"], category: CollectionNames.Lunch),
         FoodItem(name: "Fish Tacos", cals: 468, fats: 21, carbs: 37, protein: 15, allergens: ["fish"], category: CollectionNames.Lunch),
         FoodItem(name: "Mac and Cheese", cals: 71, fats: 3, carbs: 2, protein: 4, allergens: ["dairy"], category: CollectionNames.Lunch),
         FoodItem(name: "Beef Chili", cals: 380, fats: 6, carbs: 32, protein: 18, allergens: ["beef"], category: CollectionNames.Lunch),
         FoodItem(name: "Chicken Salad", cals: 554, fats: 37, carbs: 20, protein: 18, allergens: ["poultry"], category: CollectionNames.Lunch),
-        FoodItem(name: "Bacon Pasta", cals: 268, fats: 15, carbs: 11, protein: 14, allergens: ["pork"], category: CollectionNames.Lunch),
+        FoodItem(name: "Bacon Pasta", cals: 268, fats: 15, carbs: 11, protein: 14, allergens: ["pork", "gluten"], category: CollectionNames.Lunch),
         FoodItem(name: "Pork Tenderloin", cals: 399, fats: 14, carbs: 21, protein: 12, allergens: ["pork"], category: CollectionNames.Lunch),
         FoodItem(name: "Steak Salad", cals: 417, fats: 23, carbs: 15, protein: 16, allergens: ["beef"], category: CollectionNames.Lunch),
         FoodItem(name: "Tuna Salad", cals: 327, fats: 2, carbs: 18, protein: 20, allergens: ["fish"], category: CollectionNames.Lunch),
@@ -43,12 +43,9 @@ class Database {
         FoodItem(name: "Quinoa Salad", cals: 141, fats: 6, carbs: 16, protein: 3, allergens: [], category: CollectionNames.Lunch),
         FoodItem(name: "Salad", cals: 167, fats: 9, carbs: 9, protein: 10, allergens: [], category: CollectionNames.Lunch),
         FoodItem(name: "Baked Potato", cals: 454, fats: 3, carbs: 66, protein: 20, allergens: [], category: CollectionNames.Lunch),
-        FoodItem(name: "Beef Burger", cals: 406, fats: 13.7, carbs: 36, protein: 10, allergens: ["beef"], category: CollectionNames.Lunch),
+        FoodItem(name: "Beef Burger", cals: 406, fats: 13.7, carbs: 36, protein: 10, allergens: ["beef", "gluten"], category: CollectionNames.Lunch),
         FoodItem(name: "Beef Stroganoff", cals: 273, fats: 13.6, carbs: 9, protein: 13.8, allergens: ["beef"], category: CollectionNames.Lunch),
         FoodItem(name: "Meatball Sub Sandwich", cals: 500, fats: 12, carbs: 41, protein: 22, allergens: ["beef"], category: CollectionNames.Lunch),
-        
-        
-        
     ]
     static var dinners:[FoodItem] = [
         FoodItem(name: "Grilled Steak", cals: 549, fats: 20, carbs: 1.2, protein: 30, allergens: ["beef"], category: CollectionNames.Dinner),
@@ -63,7 +60,7 @@ class Database {
         FoodItem(name: "Pineapple Chicken", cals: 343, fats: 15.7, carbs: 11, protein: 23, allergens: ["poultry"], category: CollectionNames.Dinner),
         FoodItem(name: "Pad Thai", cals: 458, fats: 14, carbs: 39, protein: 22, allergens: ["nuts"], category: CollectionNames.Dinner),
         FoodItem(name: "Meatballs & Squash", cals: 1489, fats: 39, carbs: 115, protein: 24, allergens: ["meat"], category: CollectionNames.Dinner),
-        FoodItem(name: "Turkey Burger", cals: 388, fats: 8.2, carbs: 39, protein: 22, allergens: ["poultry"], category: CollectionNames.Dinner),
+        FoodItem(name: "Turkey Burger", cals: 388, fats: 8.2, carbs: 39, protein: 22, allergens: ["poultry", "gluten"], category: CollectionNames.Dinner),
         FoodItem(name: "Chicken Enchilada", cals: 525, fats: 9, carbs: 61, protein: 30, allergens: ["poultry", "dairy"], category: CollectionNames.Dinner),
         FoodItem(name: "Chicken Kabobs", cals: 470, fats: 6.2, carbs: 20, protein: 30, allergens: ["poultry"], category: CollectionNames.Dinner),
         FoodItem(name: "Honey Salmon", cals: 484, fats: 26, carbs: 40, protein: 22, allergens: ["fish"], category: CollectionNames.Dinner),
@@ -78,9 +75,51 @@ class Database {
         FoodItem(name: "Tilapia", cals: 265, fats: 4, carbs: 24, protein: 14, allergens: ["fish"], category: CollectionNames.Dinner),
         FoodItem(name: "Lettuce Wraps", cals: 85, fats: 1, carbs: 5, protein: 7, allergens: ["nuts"], category: CollectionNames.Dinner),
         FoodItem(name: "Grilled Potatos", cals: 195, fats: 4, carbs: 36, protein: 2, allergens: [], category: CollectionNames.Dinner),
-        
-        
     ]
+    
+    static var restrictions = ["Vegetarian","Vegan","Peanut Allergies", "Lactose Intolerant", "Celiac", "Diabetic", "Vitamin Deficiencies"]
+    static func filteredMeal(meal:String) -> [FoodItem] {
+        var toReturn:[FoodItem] = []
+        switch (meal) {
+        case CollectionNames.Breakfast:
+            toReturn = Database.breakfasts
+        case CollectionNames.Lunch:
+            toReturn = Database.lunches
+        case CollectionNames.Dinner:
+            toReturn = Database.dinners
+        default:
+            break
+        }
+        
+        for restriction in Database.restrictions {
+            if (NSUserDefaults.standardUserDefaults().boolForKey(restriction)) {
+                switch(restriction) {
+                case "Vegetarian":
+                    toReturn = toReturn.filter({!$0.allergens.contains("poultry")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("meat")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("pork")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("beef")})
+                case "Vegan":
+                    toReturn = toReturn.filter({!$0.allergens.contains("poultry")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("meat")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("pork")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("beef")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("fish")})
+                    toReturn = toReturn.filter({!$0.allergens.contains("dairy")})
+                case "Peanut Allergies":
+                    toReturn = toReturn.filter({!$0.allergens.contains("nuts")})
+                case "Celiac":
+                    toReturn = toReturn.filter({!$0.allergens.contains("gluten")})
+                default:
+                    break
+                }
+            }
+        }
+        
+        return toReturn
+        
+        
+    }
     
     static var tips:[String] = [
         "Eat more protein to get strong",

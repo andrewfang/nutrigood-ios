@@ -130,11 +130,11 @@ class MealSelectViewController: UIViewController, UITableViewDelegate, UITableVi
                     case Database.CollectionNames.Favorites:
                         vc.items = Database.favorites
                     case Database.CollectionNames.Breakfast:
-                        vc.items = Database.breakfasts
+                        vc.items = Database.filteredMeal(Database.CollectionNames.Breakfast)
                     case Database.CollectionNames.Lunch:
-                        vc.items = Database.lunches
+                        vc.items = Database.filteredMeal(Database.CollectionNames.Lunch)
                     case Database.CollectionNames.Dinner:
-                        vc.items = Database.dinners
+                        vc.items = Database.filteredMeal(Database.CollectionNames.Dinner)
                     default:
                         break
                     }
