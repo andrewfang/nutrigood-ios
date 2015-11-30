@@ -402,12 +402,15 @@
 				TargetAttributes = {
 					494432EA1BF53D0B0054CE82 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = H99QX4J54R;
 					};
 					497B49671C07893C00765A46 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = H99QX4J54R;
 					};
 					497B49731C07893C00765A46 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = H99QX4J54R;
 					};
 				};
 			};
@@ -673,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = nutrigood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -685,6 +689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = nutrigood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -697,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = NutriGoodWatch_Extension;
 				INFOPLIST_FILE = NutriGoodWatch/Info.plist;
@@ -713,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = NutriGoodWatch_Extension;
 				INFOPLIST_FILE = NutriGoodWatch/Info.plist;
@@ -728,6 +735,7 @@
 		497B49851C07893C00765A46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "NutriGoodWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp.watchkitextension;
@@ -742,6 +750,7 @@
 		497B49861C07893C00765A46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "NutriGoodWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrewbfang.nutrigood.watchkitapp.watchkitextension;
