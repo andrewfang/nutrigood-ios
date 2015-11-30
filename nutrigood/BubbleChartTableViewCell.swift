@@ -20,6 +20,11 @@ class BubbleChartTableViewCell: UITableViewCell {
             self.bubbleChartView.dragEnabled = true
             self.bubbleChartView.leftAxis.drawLabelsEnabled = false
             self.bubbleChartView.rightAxis.drawLabelsEnabled = false
+            self.bubbleChartView.leftAxis.startAtZeroEnabled = false
+            self.bubbleChartView.leftAxis.spaceBottom = 0.3
+            self.bubbleChartView.leftAxis.spaceTop = 0.3
+            self.bubbleChartView.rightAxis.startAtZeroEnabled = false
+            self.bubbleChartView.maxVisibleValueCount = 200
             self.bubbleChartView.animate(yAxisDuration: 1.3, easingOption: .EaseInBounce)
             self.setUpData()
         }
@@ -47,19 +52,19 @@ class BubbleChartTableViewCell: UITableViewCell {
         dateFormatter.timeStyle = .NoStyle
         
         for i in 0..<nutritionData.count {
-            let proteinPercent = nutritionData[i][PublicConstants.Protein] as? Double ?? 0.0 / maxProtein
+            let proteinPercent = (nutritionData[i][PublicConstants.Protein] as? Double ?? 0.0) / maxProtein * 100
             let pEntry = BubbleChartDataEntry(xIndex: i, value: proteinPercent, size: CGFloat(proteinPercent))
             proteins.append(pEntry)
             
-            let fatPercent = nutritionData[i][PublicConstants.Fats] as? Double ?? 0.0 / maxFats
+            let fatPercent = (nutritionData[i][PublicConstants.Fats] as? Double ?? 0.0) / maxFats  * 100
             let fEntry = BubbleChartDataEntry(xIndex: i, value: fatPercent, size: CGFloat(fatPercent))
             fats.append(fEntry)
             
-            let carbPercent = nutritionData[i][PublicConstants.Carbs] as? Double ?? 0.0 / maxCarbs
+            let carbPercent = (nutritionData[i][PublicConstants.Carbs] as? Double ?? 0.0) / maxCarbs  * 100
             let carbEntry = BubbleChartDataEntry(xIndex: i, value: carbPercent, size: CGFloat(carbPercent))
             carbs.append(carbEntry)
             
-            let calPercent = Double(nutritionData[i][PublicConstants.Calories] as? Int ?? 0) / maxCalories
+            let calPercent = Double(nutritionData[i][PublicConstants.Calories] as? Int ?? 0) / maxCalories  * 100
             let calEntry = BubbleChartDataEntry(xIndex: i, value: calPercent, size: CGFloat(calPercent))
             calories.append(calEntry)
             

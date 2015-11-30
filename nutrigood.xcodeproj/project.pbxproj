@@ -781,6 +781,7 @@
 				497B49861C07893C00765A46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		497B498B1C07893C00765A46 /* Build configuration list for PBXNativeTarget "NutriGoodWatch" */ = {
 			isa = XCConfigurationList;
@@ -789,6 +790,7 @@
 				497B49841C07893C00765A46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
