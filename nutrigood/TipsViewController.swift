@@ -193,4 +193,9 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         self.tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
+    
+    @IBAction func watchNotif(sender: UIBarButtonItem) {
+        let alert = UIAlertController.makeSimpleAlert("Synced", message: "Your biometrics are synced through your wearable device", actionText: "Ok")
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }

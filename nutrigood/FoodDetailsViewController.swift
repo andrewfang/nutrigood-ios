@@ -111,7 +111,7 @@ class FoodDetailsViewController: UIViewController {
         let colors = [Colors.CalorieColor, Colors.FatColor, Colors.ProteinColor, Colors.CarbColor]
         let chartDataSet = BarChartDataSet(yVals: dataEntries)
         chartDataSet.colors = colors
-        nutritionChart.data = BarChartData(xVals: ["Cal: \(self.item.calories)", "Fat: \(self.item.fats)g", "Prot: \(self.item.fats)g", "Carb: \(self.item.carbs)g"], dataSet: chartDataSet)
+        nutritionChart.data = BarChartData(xVals: ["Cal: \(self.item.calories)", "Fat: \(self.item.fats)g", "Pro: \(self.item.protein)g", "Crb: \(self.item.carbs)g"], dataSet: chartDataSet)
     }
     
     private func setupAllergens() {

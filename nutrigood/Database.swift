@@ -14,7 +14,7 @@ class Database {
         FoodItem(name: "Chocolate Waffle", cals: 456, fats: 12.0, carbs: 44, protein: 20, allergens: ["gluten"], category: CollectionNames.Breakfast),
         FoodItem(name: "Pancakes and Syrup", cals: 460, fats: 10, carbs: 57, protein: 20, allergens: ["gluten"], category: CollectionNames.Breakfast),
         FoodItem(name: "Yogurt and Granola", cals: 790, fats: 18, carbs: 99, protein: 22, allergens: ["nuts"], category: CollectionNames.Breakfast),
-        FoodItem(name: "Breakfast Sausage", cals: 80, fats: 1, carbs: 0, protein: 9, allergens: ["meat"], category: CollectionNames.Breakfast),
+        FoodItem(name: "Breakfast Sausage", cals: 80, fats: 5, carbs: 3, protein: 9, allergens: ["meat"], category: CollectionNames.Breakfast),
         FoodItem(name: "Oatmeal", cals: 309, fats: 15, carbs: 37, protein: 7, allergens: [], category: CollectionNames.Breakfast),
         FoodItem(name: "Muffin", cals: 294, fats: 19, carbs: 15, protein: 8, allergens: ["gluten"], category: CollectionNames.Breakfast),
         FoodItem(name: "Scrambled Eggs", cals: 180, fats: 5, carbs: 12, protein: 13, allergens: [], category: CollectionNames.Breakfast),
@@ -25,7 +25,7 @@ class Database {
         FoodItem(name: "Fruit Bowl", cals: 283, fats: 7.5, carbs: 39, protein: 10.5, allergens: [], category: CollectionNames.Breakfast)
     ]
     static var lunches:[FoodItem] = [
-        FoodItem(name: "Ham & Cheese Sandwich", cals: 340, fats: 4.1, carbs: 45.2, protein: 11.6, allergens: ["pork", "dairy"], category: CollectionNames.Lunch),
+        FoodItem(name: "Ham Cheese Sandwich", cals: 340, fats: 4.1, carbs: 45.2, protein: 11.6, allergens: ["pork", "dairy"], category: CollectionNames.Lunch),
         FoodItem(name: "Tuna and Rice", cals: 700, fats: 4, carbs: 100, protein: 24, allergens: ["fish"], category: CollectionNames.Lunch),
         FoodItem(name: "Pita Pizza", cals: 415, fats: 45, carbs: 31, protein: 4, allergens: [], category: CollectionNames.Lunch),
         FoodItem(name: "Turkey Sliders", cals: 160, fats: 10, carbs: 7, protein: 5, allergens: ["poultry"], category: CollectionNames.Lunch),
@@ -51,7 +51,6 @@ class Database {
         FoodItem(name: "Grilled Steak", cals: 549, fats: 20, carbs: 1.2, protein: 30, allergens: ["beef"], category: CollectionNames.Dinner),
         FoodItem(name: "Lasagna", cals: 1012, fats: 32, carbs: 72, protein: 20, allergens: ["dairy"], category: CollectionNames.Dinner),
         FoodItem(name: "Glazed Ham", cals: 416, fats: 13.1, carbs: 11.2, protein: 25, allergens: ["pork"], category: CollectionNames.Dinner),
-        FoodItem(name: "Bison", cals: 240, fats: 8, carbs: 3, protein: 17, allergens: ["meat"], category: CollectionNames.Dinner),
         FoodItem(name: "Steak Taco", cals: 380, fats: 18.5, carbs: 29.5, protein: 14, allergens: ["beef"], category: CollectionNames.Dinner),
         FoodItem(name: "Chicken Spaghetti", cals: 275, fats: 12, carbs: 13.4, protein: 13, allergens: ["poultry"], category: CollectionNames.Dinner),
         FoodItem(name: "Chicken and Rice", cals: 487, fats: 17.1, carbs: 24.1, protein: 25, allergens: ["poultry"], category: CollectionNames.Dinner),

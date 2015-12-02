@@ -143,4 +143,9 @@ class MealSelectViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    @IBAction func watchNotif(sender: UIBarButtonItem) {
+        let alert = UIAlertController.makeSimpleAlert("Synced", message: "Your biometrics are synced through your wearable device", actionText: "Ok")
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
 }

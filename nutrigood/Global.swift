@@ -68,7 +68,7 @@ class Profile {
             let userDefault = NSUserDefaults.standardUserDefaults()
             let setDefault = userDefault.doubleForKey(PublicConstants.UserDefaultProtein)
             if (setDefault < 1) {
-                return 100.0
+                return 70.0
             }
             return setDefault
         } set {

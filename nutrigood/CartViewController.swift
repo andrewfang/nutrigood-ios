@@ -72,9 +72,7 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 userDefaults.setObject(nutritionData, forKey: PublicConstants.NutritionDataKey)
                 
-                self.notifyCartUpdated()
                 self.showPurchasedAlert()
-                self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
             }))
         }
         presentViewController(alert, animated: true, completion: nil)
@@ -86,7 +84,10 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func showPurchasedAlert() {
         let purchaseConfirmAlert = UIAlertController(title: "Thank You", message: "Your food will be delivered shortly.", preferredStyle: .Alert)
-        purchaseConfirmAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+        purchaseConfirmAlert.addAction(UIAlertAction(title: "Okay", style: .Default, handler: { action in
+            self.notifyCartUpdated()
+            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        }))
         self.presentViewController(purchaseConfirmAlert, animated: true, completion: nil)
     }
     

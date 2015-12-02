@@ -44,7 +44,7 @@ class InterfaceController: WKInterfaceController {
                 self.dater.timeStyle = .ShortStyle
             }
             
-            self.lastSyncedLabel.setText("Last synced \(self.dater.stringFromDate(lastSyncedDate))")
+            self.lastSyncedLabel.setText("last synced \(self.dater.stringFromDate(lastSyncedDate))")
         }
     }
     
@@ -61,7 +61,7 @@ class InterfaceController: WKInterfaceController {
             let date = NSDate(timeIntervalSinceNow: 0)
             self.dater.dateStyle = .NoStyle
             self.dater.timeStyle = .ShortStyle
-            self.lastSyncedLabel.setText("Last synced \(self.dater.stringFromDate(date))")
+            self.lastSyncedLabel.setText("last synced \(self.dater.stringFromDate(date))")
             NSUserDefaults.standardUserDefaults().setObject(date, forKey: Constants.DefaultDateKey)
         }
         

@@ -181,5 +181,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         picker.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func watchNotif(sender: UIBarButtonItem) {
+        let alert = UIAlertController.makeSimpleAlert("Synced", message: "Your biometrics are synced through your wearable device", actionText: "Ok")
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
 }

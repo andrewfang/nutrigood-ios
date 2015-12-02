@@ -28,7 +28,11 @@
                                 </button>
                             </items>
                         </group>
-                        <label alignment="center" verticalAlignment="bottom" text="Not Synced" id="q0G-WM-Su9">
+                        <label alignment="center" verticalAlignment="bottom" text="Biometric Information" id="gHh-Bt-F0a">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="11"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="bottom" text="not synced" id="q0G-WM-Su9">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="font" type="system" weight="light" pointSize="11"/>
                         </label>

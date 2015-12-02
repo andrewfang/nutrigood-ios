@@ -106,6 +106,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="69H-h6-P1U">
+                        <barButtonItem key="leftBarButtonItem" image="watch" id="BgY-n8-SA9">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="watchNotif:" destination="CAa-bj-pn5" id="wqp-XZ-Fv4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="cart" id="217-my-9HA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -182,8 +188,16 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="424"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Nutri-GOOD subscription is up to date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wY8-hg-k9X">
+                                    <rect key="frame" x="0.0" y="116" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="88" id="SWH-Ii-fek" customClass="SelectionTableViewCell" customModule="nutrigood" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="88" id="SWH-Ii-fek" customClass="SelectionTableViewCell" customModule="nutrigood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SWH-Ii-fek" id="QQK-Ta-8ri">
@@ -277,7 +291,7 @@
             </objects>
             <point key="canvasLocation" x="5080" y="-218"/>
         </scene>
-        <!--🍲-->
+        <!--Food Details View Controller-->
         <scene sceneID="LoZ-in-Obk">
             <objects>
                 <viewController id="Ufv-7M-VIn" customClass="FoodDetailsViewController" customModule="nutrigood" customModuleProvider="target" sceneMemberID="viewController">
@@ -418,7 +432,7 @@
                             <constraint firstItem="GWC-FC-eGJ" firstAttribute="centerY" secondItem="Bz9-s7-f7U" secondAttribute="centerY" id="zCV-Q8-qcb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="🍲" id="qyQ-SN-Ens">
+                    <navigationItem key="navigationItem" id="qyQ-SN-Ens">
                         <barButtonItem key="rightBarButtonItem" image="cart" id="JRw-q4-cDQ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -583,7 +597,14 @@
                             <outlet property="delegate" destination="omh-3D-QhY" id="JJJ-OU-vGz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kJ7-gq-SLF"/>
+                    <navigationItem key="navigationItem" id="kJ7-gq-SLF">
+                        <barButtonItem key="leftBarButtonItem" image="watch" id="3LF-WT-adb">
+                            <color key="tintColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="watchNotif:" destination="omh-3D-QhY" id="Csy-OX-g0C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdp-rA-C8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1070,7 +1091,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="cqe-H2-bg5"/>
+                    <navigationItem key="navigationItem" id="cqe-H2-bg5">
+                        <barButtonItem key="leftBarButtonItem" image="watch" id="fpP-V9-E1c">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="watchNotif:" destination="FX8-st-9YK" id="dK7-lS-fVB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstChatOptions" destination="fOq-5g-0BH" id="WSW-XV-16g"/>
                         <outlet property="mealChatOptions" destination="pGg-87-I1L" id="Zji-3Z-vZM"/>
@@ -1299,13 +1327,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OD-ld-hpY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OD-ld-hpY">
                                 <rect key="frame" x="178" y="494" width="244" height="47"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.22352941179999999" green="0.70980392160000005" blue="0.2901960784" alpha="0.87383868239999996" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                <state key="normal" title="Update Dietary Goals">
+                                <state key="normal" title="Dietary Goals">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1348,7 +1376,14 @@
                             <constraint firstItem="LVu-N9-w7a" firstAttribute="centerX" secondItem="D0U-r4-1BR" secondAttribute="centerX" id="uQ0-A8-25o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Btd-fp-HUP"/>
+                    <navigationItem key="navigationItem" id="Btd-fp-HUP">
+                        <barButtonItem key="leftBarButtonItem" image="watch" id="OIz-Nz-utZ">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="watchNotif:" destination="dil-Sw-iWC" id="3nc-A4-OXe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="profilePic" destination="T4J-ha-eq1" id="nFw-9L-blJ"/>
                         <outlet property="tableView" destination="LVu-N9-w7a" id="0Xc-1u-rOF"/>
@@ -2017,12 +2052,13 @@
         <image name="plus" width="24" height="24"/>
         <image name="profile" width="24" height="24"/>
         <image name="refresh" width="24" height="24"/>
-        <image name="testImage" width="60" height="60"/>
+        <image name="testImage" width="98" height="98"/>
         <image name="tips" width="24" height="24"/>
+        <image name="watch" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="m0E-PS-bpA"/>
-        <segue reference="Ex0-Uy-LGk"/>
         <segue reference="jh2-uT-bJ8"/>
+        <segue reference="1O4-3s-9Ws"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -402,15 +402,15 @@
 				TargetAttributes = {
 					494432EA1BF53D0B0054CE82 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = H99QX4J54R;
+						DevelopmentTeam = 8YJ2342CPM;
 					};
 					497B49671C07893C00765A46 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = H99QX4J54R;
+						DevelopmentTeam = 8YJ2342CPM;
 					};
 					497B49731C07893C00765A46 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = H99QX4J54R;
+						DevelopmentTeam = 8YJ2342CPM;
 					};
 				};
 			};
