@@ -92,7 +92,7 @@ class TipsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         cell.layoutIfNeeded()
-        
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     
